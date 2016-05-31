@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|images|upload|assets|robots\.txt)
+RewriteRule ^(.*)$ /profile/index.php/$1 [L]
+Header add Access-Control-Allow-Origin "*"
