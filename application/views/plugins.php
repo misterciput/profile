@@ -24,6 +24,7 @@
       <script type="text/javascript" src="<?=base_url()?>assets/js/carbon.js"></script>
       <script type="text/javascript" src="<?=base_url()?>assets/js/prism.js"></script>
       <script type="text/javascript" src="<?=base_url()?>assets/ckeditor/ckeditor.js"></script>
+      <script type="text/javascript" src="<?=base_url()?>assets/ckfinder/ckfinder.js"></script>
       <script type="text/javascript" src="<?=base_url()?>assets/js/jquery.dataTables.min.js"></script>
       <script src='<?php echo base_url();?>assets/js/jquery.autocomplete.js'></script>
       <style type="text/css">

@@ -4,7 +4,7 @@
 					<th width="20%">No</th>
 					<th width="20%">Judul</th>
 					<th width="20%">Kategori</th>
-					<th >Tanggal gallery</th>
+					<th >Tanggal</th>
 					<th>Action</th>
 				</tr>
 			</thead>
