@@ -23,6 +23,8 @@
       <script type="text/javascript" src="<?=base_url()?>assets/js/lunr.min.js"></script>
       <script type="text/javascript" src="<?=base_url()?>assets/js/carbon.js"></script>
       <script type="text/javascript" src="<?=base_url()?>assets/js/prism.js"></script>
+      <script type="text/javascript" src="<?=base_url()?>assets/js/jquery.timeago.min.js"></script>
+      <script type="text/javascript" src="<?=base_url()?>assets/js/prism.js"></script>
       <script type="text/javascript" src="<?=base_url()?>assets/ckeditor/ckeditor.js"></script>
       <script type="text/javascript" src="<?=base_url()?>assets/ckfinder/ckfinder.js"></script>
       <script type="text/javascript" src="<?=base_url()?>assets/js/jquery.dataTables.min.js"></script>
