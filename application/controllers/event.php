@@ -110,4 +110,10 @@ class Event extends CI_Controller {
 			}
 		}
 
+	public function delete($id){
+		$this->event->delete_event($id);
+		$data['message'] = 'event telah dihapus';
+		$this->index($data);
+	}
+
 }
