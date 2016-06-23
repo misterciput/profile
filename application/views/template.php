@@ -28,6 +28,8 @@
         
         <li class="bold <?=$this->uri->segment(1) == 'artikel' ? 'active' : ''?>"><a href="<?=base_url()?>artikel" class="waves-effect waves-teal">Artikel</a>
         </li>
+        <li class="bold <?=$this->uri->segment(1) == 'video' ? 'active' : ''?>"><a href="<?=base_url()?>video" class="waves-effect waves-teal">Video</a>
+        </li>
         <li class="bold <?=$this->uri->segment(1) == 'event' ? 'active' : ''?>"><a href="<?=base_url()?>event" class="waves-effect waves-teal">Event</a>
         </li>
         <!-- <li class="bold <?=$this->uri->segment(1) == 'gallery' ? 'active' : ''?>"><a href="<?=base_url()?>gallery" class="waves-effect waves-teal">Gallery</a></li> -->
