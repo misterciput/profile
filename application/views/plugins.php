@@ -474,7 +474,7 @@ div.material-table table td:last-child {
           });
     </script>
 
-    <?php if($message){?>
+    <?php if(isset($message)){?>
       <script type="text/javascript">
           Materialize.toast('<?=$message?>', 4000)
       </script>

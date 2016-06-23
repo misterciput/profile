@@ -6,6 +6,7 @@ class Home extends CI_Controller {
 	function __construct() {
        parent::__construct();
        $this->load->model('md_user', 'user');
+       $this->load->model('md_artikel', 'artikel');
    }
 
 	public function index()
@@ -33,8 +34,9 @@ class Home extends CI_Controller {
 			$data['status'] = 1;
 			$this->session->set_userdata($data);
 			$data['message'] = 'Selamat datang '.$data['name'];
-			$data['title'] = 'Welcome';
-			$data['view'] = 'view_home';
+			$data['title'] = 'Artikel';
+			$data['artikel'] = $this->artikel->get_all_artikel();
+			$data['view'] = 'view_artikel';
 			$this->load->view('template', $data);
 
 		}else{

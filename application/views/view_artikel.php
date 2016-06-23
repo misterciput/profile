@@ -1,7 +1,7 @@
 		<table class="responsive-table bordered" id="table-artikel">
 			<thead>
 				<tr>
-					<th width="20%">No</th>
+					<th width="5%">No</th>
 					<th width="20%">Judul</th>
 					<th width="20%">Kategori</th>
 					<th >Tanggal Artikel</th>

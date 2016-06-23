@@ -20,13 +20,15 @@
   </head>
   <body>
     <header>
-      <div class="container"><a href="http://materializecss.com/waves.html#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
+      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
       <ul id="nav-mobile" class="side-nav fixed" style="transform: translateX(0%);">
         <li class="logo"><a id="logo-container" class="brand-logo">
             <object  type="image/svg+xml" data="<?=base_url()?>assets/img/logo.svg"
             width="70%">Your browser does not support SVG</object></a></li>
         
         <li class="bold <?=$this->uri->segment(1) == 'artikel' ? 'active' : ''?>"><a href="<?=base_url()?>artikel" class="waves-effect waves-teal">Artikel</a>
+        </li>
+        <li class="bold <?=$this->uri->segment(1) == 'event' ? 'active' : ''?>"><a href="<?=base_url()?>event" class="waves-effect waves-teal">Event</a>
         </li>
         <!-- <li class="bold <?=$this->uri->segment(1) == 'gallery' ? 'active' : ''?>"><a href="<?=base_url()?>gallery" class="waves-effect waves-teal">Gallery</a></li> -->
         <li class="bold"><a href="<?=base_url()?>home/logout" class="waves-effect waves-teal">Logout</a></li>
