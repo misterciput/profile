@@ -1,6 +1,6 @@
 <?php $this->load->view('plugins');?>
 <div class="row container"><br/><br/>
-	<div class="card col s8">
+	<div class="card col s6">
     <div class="card-image waves-effect waves-block waves-light">
     </div>
     <div class="card-content">
@@ -24,8 +24,8 @@
       </form>
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      <span class="card-title grey-text text-darken-4">Form Login<i class="material-icons right">close</i></span>
+      <p>Silahkan Login Terlebih Dahulu</p>
     </div>
   </div>
 </div>

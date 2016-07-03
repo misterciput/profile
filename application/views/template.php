@@ -23,10 +23,16 @@
       <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
       <ul id="nav-mobile" class="side-nav fixed" style="transform: translateX(0%);">
         <li class="logo"><a id="logo-container" class="brand-logo">
-            <object  type="image/svg+xml" data="<?=base_url()?>assets/img/logo.svg"
-            width="70%">Your browser does not support SVG</object></a></li>
+            <!-- <object  type="image/svg+xml" data="<?=base_url()?>assets/img/logo.svg"
+            width="70%">Your browser does not support SVG</object> -->
+
+            <img src="<?=base_url()?>assets/img/eSignature.png"  width="100%" height="230%" alt="">
+
+            </a></li>
         
         <li class="bold <?=$this->uri->segment(1) == 'artikel' ? 'active' : ''?>"><a href="<?=base_url()?>artikel" class="waves-effect waves-teal">Artikel</a>
+        </li>
+        <li class="bold <?=$this->uri->segment(1) == 'video' ? 'active' : ''?>"><a href="<?=base_url()?>video" class="waves-effect waves-teal">Video</a>
         </li>
         <li class="bold <?=$this->uri->segment(1) == 'event' ? 'active' : ''?>"><a href="<?=base_url()?>event" class="waves-effect waves-teal">Event</a>
         </li>
@@ -63,7 +69,7 @@
       <div class="footer-copyright">
         <div class="container">
         © 2016, All rights reserved.
-        <a class="grey-text text-lighten-4 right" href="https://github.com/Dogfalo/materialize/blob/master/LICENSE">XYZ</a>
+        <a class="grey-text text-lighten-4 right" href="">eSignature</a>
         </div>
       </div>
     </footer>
