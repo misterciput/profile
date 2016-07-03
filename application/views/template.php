@@ -9,10 +9,9 @@
     <meta name="description" content="Materialize is a modern responsive CSS framework based on Material Design by Google. ">
     <title><?=$title?></title>
     <!-- Favicons-->
-    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <link rel="shortcut icon" type="image/icon" href="<?=base_url()?>assets/images/favicon.ico"/>
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
-    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
     <!--  Android 5 Chrome Color-->
     <meta name="theme-color" content="#EE6E73">
     <script src="//cdn.transifex.com/live.js"></script>
@@ -25,8 +24,7 @@
         <li class="logo"><a id="logo-container" class="brand-logo">
             <!-- <object  type="image/svg+xml" data="<?=base_url()?>assets/img/logo.svg"
             width="70%">Your browser does not support SVG</object> -->
-
-            <img src="<?=base_url()?>assets/img/eSignature.png"  width="100%" height="230%" alt="">
+            <img src="<?=base_url()?>assets/images/logo1.png" alt="logo" width="120%">
 
             </a></li>
         

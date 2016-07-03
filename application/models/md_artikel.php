@@ -31,4 +31,15 @@ class Md_artikel extends CI_Model {
 	public function delete_artikel($id){
 		$this->db->delete('artikel', array('id' => $id));
 	}
+
+	public function get_news_headline(){
+		$this->db->from('artikel');
+		$this->db->where('kategori','NEWS');
+		$this->db->where('headline', 1);
+		$this->db->where('show', 1);
+		$this->db->order_by('id','desc');
+		$result = $this->db->get();
+
+		return $result->result(); 
+	}
 }

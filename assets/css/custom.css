@@ -1,0 +1,27 @@
+
+/*
+KOMINFO - Digital Signature
+*/
+
+
+.logo{
+	margin-right:0;
+	width:100%;
+	max-width:140px;
+}
+
+.main-nav li a {
+	font-size: 12px;
+	padding:39px 10px !important;
+}
+
+@media(max-width:1199px ){
+	#navbar{
+		width:84%;
+	}
+}
+@media(max-width:991px ){
+	#navbar{
+		width:80%;
+	}
+}
