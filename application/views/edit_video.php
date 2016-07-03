@@ -39,7 +39,7 @@
     <video width="400" controls>
       <source src="<?=base_url()?>assets/videos/<?=$videos?>" type="video/mp4">
       <source src="<?=base_url()?>assets/videos/<?=$videos?>" type="video/ogg">
-      Your browser does not support HTML5 video.
+      Your browser does not support HTML5 vides.
     </video>
   </div>
 </div>
