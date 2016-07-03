@@ -8,9 +8,11 @@
       <link type="text/css" rel="stylesheet" href="<?=base_url()?>assets/css/ghpages-materialize.css"/>
       <link type="text/css" rel="stylesheet" href="<?=base_url()?>assets/css/jquery.dataTables.min.css"/>
       <link href='<?php echo base_url();?>assets/css/jquery.autocomplete.css' rel='stylesheet' />
-
+      <link rel="shortcut icon" type="image/icon" href="<?=base_url()?>assets/images/favicon.ico"/>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <title>Digital Signature | KOMINFO</title>
     </head>
 
     <body>
