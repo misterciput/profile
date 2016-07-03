@@ -36,7 +36,11 @@
 
   <div class="card-reveal">
     <span class="card-title grey-text text-darken-4">Video<i class="material-icons right">close</i></span>
-    <img src="<?=base_url()?>assets/videos/<?=$videos?>" style='height: 100%; width: 100%; object-fit: contain'/>
+    <video width="400" controls>
+      <source src="<?=base_url()?>assets/videos/<?=$videos?>" type="video/mp4">
+      <source src="<?=base_url()?>assets/videos/<?=$videos?>" type="video/ogg">
+      Your browser does not support HTML5 video.
+    </video>
   </div>
 </div>
 
