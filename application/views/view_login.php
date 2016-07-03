@@ -1,6 +1,6 @@
 <?php $this->load->view('plugins');?>
 <div class="row container"><br/><br/>
-	<div class="card col s6">
+	<div class="card col s6 offset-s3">
     <div class="card-image waves-effect waves-block waves-light">
     </div>
     <div class="card-content">

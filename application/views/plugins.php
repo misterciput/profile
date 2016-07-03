@@ -72,6 +72,16 @@ div.material-table .table-header {
   border-bottom: solid 1px #DDDDDD;
 }
 
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+   min-width: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+
 div.material-table .table-header .actions {
   display: -webkit-flex;
   margin-left: auto;
