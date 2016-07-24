@@ -1,27 +1,450 @@
-
 /*
 KOMINFO - Digital Signature
 */
 
-
+body{
+	font-size: 14px;
+}
 .logo{
 	margin-right:0;
 	width:100%;
 	max-width:140px;
 }
-
-.main-nav li a {
-	font-size: 12px;
-	padding:39px 10px !important;
+.main-navbar{
+	background:#f1f1f1;
 }
 
-@media(max-width:1199px ){
+.about-left{
+	background-color: #24346c !important;
+}
+
+.about-area .about-left img{
+	width:100%;
+	max-width:430px;
+	height:auto;
+	margin:0 auto;
+}
+.about-right p, .single-wc-content p, .single-service p, .single-from-blog > p{
+	text-align:justify;
+}
+.img-full{
+	margin:40px auto;
+}
+
+.single-wc-content p{
+	font-size: 14px;
+}
+
+.single-from-blog .blog-title h2{
+	font-size:24px;
+	line-height: 32px;
+	padding-bottom:20px;
+}
+
+.single-from-blog .blog-title p {
+	color:#999;
+	font-size:12px;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color:#24346c;
+}
+
+.single-item > img {
+	width: auto;
+}
+#header{
+	background:#24346c;
+}
+.header-overlay .header-slide {
+	text-shadow:-1px -1px 1px #000;
+}
+
+.header-social {
+	color: white;
+	display: inline-block;
+	float:right;
+	margin: 10px auto;
+	width: 360px;
+}
+
+.header-social a {
+	border: 1px solid #9f9f9f;
+	border-radius: 50%;
+	color: #dddddd;
+	display: inline-block;
+	font-size: 16px;
+	height: 32px;
+	line-height: 32px;
+	margin: 0 6px;
+	text-align: center;
+	width: 32px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.header-social a.facebook:hover{
+	background-color: #3b5998;
+	border-color: #3b5998;
+	color: #fff;
+}
+.header-social a.twitter:hover{
+	color: #fff;
+	background-color: #00aced;
+	border-color: #00aced;
+}
+.header-social a.google-plus:hover{
+	color: #fff;
+	background-color: #dd4b39;
+	border-color: #dd4b39;
+}
+.header-social a.youtube:hover{
+	color: #fff;
+	background-color: #bb0000;
+	border-color: #bb0000;
+}
+.header-social a.linkedin:hover{
+	color: #fff;
+	background-color: #007bb5;
+	border-color: #007bb5;
+}
+.header-social a.dribbble:hover{
+	color: #fff;
+	background-color: #ea4c89;
+	border-color: #ea4c89;
+}
+
+.tittle{
+	text-shadow: 1px 1px 0 #FFFFFF;
+}
+.contact-right .tittle{
+	text-shadow: 1px 1px 0 #000000;
+}
+
+#video .embed-responsive {
+	margin-left: 257px; 
+	margin-top: -416px;
+}
+
+#video .embed-responsive iframe{
+	width: 640px; 
+	max-height: 360px;
+}
+
+.service-content, .portfolio-content, .welcome-area {
+	margin-top:0;
+}
+
+.about-area, .from-blog-content {
+	margin-top:20px;
+}
+.single-service{
+	min-height:250px;
+}
+#video img.backdrop{
+	width:100%;
+	height:auto;
+	max-height:640px;
+}
+.call-to-content h2 {
+	text-shadow:-1px -1px 0 #000000;
+}
+.call-to-overlay {
+	background-color:rgba(0,0,0,.4);
+}
+.portfolio-container{
+	margin-top:40px;
+}
+
+.contact-form .form-group textarea{
+	font-size:20px;
+}
+#contact{
+	background-image:url("../images/bg-esignature-form.jpg") !important;
+	background-size:cover;
+	background-attachment: fixed;
+}
+#contact .contact-form label{
+	font-size:20px;
+	color: #FFFFFF;
+	text-align:right;
+}
+.contact-right {
+	background-color: rgba(32, 56, 108, .92);
+}
+.contact-form button{
+	margin-right:100px;
+}
+.blog-overlay{
+	background-color:rgba(0,0,0,.65);
+}
+.blog-banner-area{
+	text-shadow:1px 1px 0 #000;
+}
+.media .media-body .button{
+	float:none;
+	text-align: center;
+}
+.single-instagram-feed{
+	transition: all 0.2s ease 0s;
+}
+.single-instagram-feed:hover{
+	opacity:0.9;
+}
+.event-caption{
+	background-color: #0c77b6;
+	line-height:20px;
+	padding: 10px;
+	color:white;
+	text-align: center;
+}
+.single-instagram-feed:hover > a .event-caption {
+	background-color: #37c6f5;
+	text-decoration: none;
+}
+.single-instagram-feed a:hover, .single-instagram-feed a:focus{
+	text-decoration: none;
+}
+footer .footer-bottom p a{
+	color: #0c77b6;
+}
+footer .footer-bottom p a:hover, footer .footer-bottom p a:focus{
+	color: #37c6f5;
+	text-decoration: none;
+}
+
+
+.navbar-collapse {
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow-x: visible;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+}
+.navbar-collapse.in {
+  overflow-y: auto;
+}
+#error-page{
+	background-color:#f8f8f8;
+	padding:50px 0;
+}
+.error-no-area {
+	box-shadow: 1px 1px 10px rgba(0,0,0,.1);
+}
+.error-message h4 {
+	color:#0c77b6;
+}
+.error-message p {
+	color:#37c6f5;
+}
+.error-message p a{
+	color:#37c6f5;
+	transition: all 0.2s ease 0s;
+}
+.error-message p a:hover {
+	color:#0c77b6;
+	text-decoration: none;
+}
+
+@media (min-width: 1199px) {
+
+  .navbar-toggle {
+	display: none;
+  }
+  .main-nav li a {
+	text-shadow: 1px 1px 0 #ffffff;
+	font-size: 12px;
+	padding:39px 10px !important;
+  }
+  .navbar-collapse {
+    width: auto;
+    border-top: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+  .navbar-collapse.in {
+    overflow-y: visible;
+  }
+  .navbar-fixed-top .navbar-collapse,
+  .navbar-static-top .navbar-collapse,
+  .navbar-fixed-bottom .navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .navbar-fixed-top .search-area{
+		top: 0 !important;
+	}
+}
+
+@media(max-width:1198px ){
+
+	.header-content h2 {
+	  margin-top:20px;	
+	  font-size: 38px;
+	  line-height: 0px;  
+	}
 	#navbar{
 		width:84%;
 	}
+	#video .embed-responsive {
+		margin-left: 157px; 
+	}
+
+	/* tambahan bootstrap */
+	.main-nav {
+	background: #37c6f5;
+	text-align: center;
+	}
+	.main-nav li {
+	  display: block;
+	  float: left;
+	  width: 100%;
+	}
+	.main-nav li a {
+		padding:10px !important;
+		text-shadow:none;
+	}
+	.navbar-header{
+		float:none;
+	}
+
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+		color: white;
+		background: #24346c;
+	}
+
+	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+		color:white;
+		background-color:#0c77b6;
+	}
+	.search-area {
+		top:-100px;
+		left:-3%;
+	}
+	
 }
 @media(max-width:991px ){
+
+	.header-content h2 {
+	  font-size: 30px;
+	  margin-top:14px;
+	  line-height: 0px;  
+	}
 	#navbar{
 		width:80%;
 	}
+	#video .embed-responsive {
+		margin-left: 106px; 
+		margin-top: -340px;
+	}
+	#video .embed-responsive iframe{
+		width: 520px; 
+		max-height: 294px;
+	}
+	.main-nav li a{
+		font-size:12px;
+	}
+
+}
+@media (min-width:768px){
+	.navbar-fixed-top .search-area{
+		top: -71px;
+	}
+	.search-area input[type="text"]:focus {
+		height:36px;
+		margin-top:25px;
+	}
+	.navbar-fixed-top .search-area input[type="text"]:focus {
+	  top: -2px !important;	  
+	}
+}
+@media(max-width:767px ){
+
+	.header-content h2 {
+	  font-size: 24px;
+	  line-height: 0px;
+	}
+
+	.main-nav {
+	background: #37c6f5;
+	}
+
+	.search-area {
+	  left: -3px;
+	  top: -100px;
+	  width: 3%;
+	}
+
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+		color: white;
+		background: #24346c;
+	}
+
+	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+		color:white;
+		background-color:#0c77b6;
+	}
+	#video .embed-responsive {
+		margin-left: 112px; 
+		margin-top: -345px;
+	}
+
+}
+
+@media(max-width:700px){
+	#video .embed-responsive {
+		margin-left: 92px; 
+		margin-top: -285px;
+	}
+	#video .embed-responsive iframe{
+		width: 430px; 
+		max-height: 240px;
+	}
+}
+
+@media(max-width: 480px){
+	
+	.header-content h2 {
+	  margin-top:-20px;	
+	  font-size: 18px;
+	  line-height: 0px;
+	}
+	#video .embed-responsive {
+		margin-left: 68px; 
+		margin-top: -210px;
+	}
+	#video .embed-responsive iframe{
+		width: 320px; 
+		max-height: 180px;
+	}
+}
+
+@media(max-width: 400px){
+
+	#video .embed-responsive {
+		margin-left: 54px; 
+		margin-top: -150px;
+	}
+	#video .embed-responsive iframe{
+		width: 240px; 
+		max-height: 120px;
+	}
+
+}
+
+@media(max-width: 360px){
+	.header-inner > img {
+		height:150px;
+	}
+
 }

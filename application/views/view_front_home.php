@@ -5,13 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Secara garis besar digital signature adalah sebuah skema matematis yang memiliki keunikan dalam mengidentifikasikan seorang pengirim (subjek hukum)." />
+    <meta name="keywords" content="tanda tangan digital, eSignature Indonesia, digital signature indonesia, identifikasi digital, esignature kominfo, tanda tangan digital kominfo, tanda tangan digital resmi" />
+    <meta name="language" content="Indonesia" />
+    <meta name="webcrawlers" content="all" />
+    <meta name="rating" content="general" />
+    <meta name="spiders" content="all" />
+    <meta name="robots" content="all" />
+
+    <meta property="og:title" content="Official Digital Signature Indonesia" />
+    <!-- META SEO -->
+
     <title>Digital Signature | KOMINFO</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="<?=base_url()?>assets/images/favicon.ico"/>
     <!-- Font Awesome -->
-    <link href="<?=base_url()?>assets/css/font-awesome.css" rel="stylesheet">
+    <link href="<?=base_url()?>assets/css/font-awesome.css" rel="stylesheet"/>
     <!-- Bootstrap -->
-    <link href="<?=base_url()?>assets/css/bootstrap.css" rel="stylesheet">
+    <link href="<?=base_url()?>assets/css/bootstrap.css" rel="stylesheet"/>
     <!-- Slick slider -->
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/slick.css"/> 
     <!-- Fancybox slider -->
@@ -22,19 +33,19 @@
     <!-- <link id="switcher" href="assets/css/theme-color/default.css" rel="stylesheet"> -->
     <link id="switcher" href="<?=base_url()?>assets/css/theme-color/lite-blue-theme.css" rel="stylesheet">
     
-    <link href="<?=base_url()?>assets/css/preloader.css" rel="stylesheet">
+    <link href="<?=base_url()?>assets/css/preloader.css" rel="stylesheet"/>
     <!-- Main Style -->
-    <link href="<?=base_url()?>assets/css/style.css" rel="stylesheet">
-    <link href="<?=base_url()?>assets/css/custom.css" rel="stylesheet">
+    <link href="<?=base_url()?>assets/css/style.css" rel="stylesheet"/>
+    <link href="<?=base_url()?>assets/css/custom.css" rel="stylesheet"/>
 
 
     <!-- Fonts -->
     <!-- Open Sans for body font -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
     <!-- Raleway for Title -->
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'/>
     <!-- Pacifico for 404 page   -->
-    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'/>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -58,7 +69,7 @@
   <header id="header">
     <div class="header-inner">
       <!-- Header image -->
-      <img src="<?=base_url()?>assets/images/banner-top.jpg" alt="img">
+      <img src="<?=base_url()?>assets/images/banner-top.jpg" alt="img"> 
       <div class="header-overlay">
         <div class="header-content">
         <!-- Start header content slider -->
@@ -67,15 +78,26 @@
           <span>EFFECTIVE</span>
           <span>EFFICIENT</span>
           WAY TO SIGN!</h2>
-        <!-- End header content slider -->  
-        <!-- Header btn area -->
-        <!-- <div class="header-btn-area">
-          <a class="knowmore-btn" href="#about">KNOW MORE</a>
-          <a class="download-btn" href="#pricing-table">NEWS</a>
-        </div> -->
+          <!-- End header content slider -->  
+          <!-- Header btn area -->
+          <!-- <div class="header-btn-area">
+            <a class="knowmore-btn" href="#about">KNOW MORE</a>
+            <a class="download-btn" href="#pricing-table">NEWS</a>
+          </div> -->
+        </div>
       </div>
-      </div>      
     </div>
+
+    <div class="header-social">
+    Find Us On: &nbsp;
+        <a class="facebook" href="#"><span class="fa fa-facebook"></span></a>
+        <a class="twitter" href="#"><span class="fa fa-twitter"></span></a>
+        <a class="google-plus" href="#"><span class="fa fa-google-plus"></span></a>
+        <a class="youtube" href="#"><span class="fa fa-youtube"></span></a>
+        <a class="linkedin" href="#"><span class="fa fa-linkedin"></span></a>
+        <!-- <a class="dribbble" href="#"><span class="fa fa-dribbble"></span></a> -->
+    </div> 
+
   </header>
   <!-- End header section -->
 
@@ -126,7 +148,7 @@
             <div class="row">
               <div class="col-md-5 col-sm-6 col-xs-12">
                 <div class="about-left wow fadeInLeft">
-                  <img src="assets/images/about-img.jpg" alt="img">
+                  <img src="assets/images/about-img.png" alt="img">
                   <!-- <a class="introduction-btn" href="#">Introduction</a> -->
                 </div>
               </div>
@@ -135,9 +157,11 @@
                   <div class="title-area">
                     <h2 class="tittle">Apa Itu <span>Digital Signature</span> ?</h2>
                     <span class="tittle-line"></span>
-                    <p>ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illotore itatis et quasi architecto beatae vitae dicta sunt explicabo.</p> 
+                    <p>Secara garis besar digital signature adalah sebuah skema matematis yang memiliki keunikan dalam mengidentifikasikan seorang pengirim (subjek hukum).</p> 
 
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores e</p>
+                    <p>Canggihnya, skema tersebut mampu membuktikan keaslian dari pemilik sebuah pesan atau dokumen digital, yang dikeluarkan oleh penyelenggara sertifikasi elektronik atau CA (certificate authority).</p>
+          
+          <p>CA adalah lembaga yang menerbitkan sertifikat digital, menandatangani sertifikat untuk memverifikasi validitasnya dan melacak sertifikat yang telah dicabut atau kedaluwarsa.</p>
                     <!-- <div class="about-btn-area">
                       <a href="#" class="button button-default" data-text="KNOW MORE"><span>KNOW MORE</span></a>
                     </div> -->                    
@@ -159,45 +183,45 @@
             <div class="title-area">
               <h2 class="tittle">Manfaat <span>eSignature</span></h2>
               <span class="tittle-line"></span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  labore et dolore magna aliqua. Ut enim ad minim veniamo laboris nis</p>
+              <p></p>
             </div>
             <div class="welcome-content">
               <div class="col-md-4">
                 <div class="row">
                   <div class="single-wc-content text-center col-md-12 wow fadeInUp">
-                    <span class="fa fa-sellsy wc-icon"></span>
-                    <h4 class="wc-tittle">Manfaat eSignature 01</h4>
-                    <p>At vero eos et accusamus et iusto odio in dignissimos ducimus voluptatum in delenatque </p>
+                    <!-- <span class="fa fa-sellsy wc-icon"></span> -->
+                    <h4 class="wc-tittle">Kerahasiaan (confidentiality)</h4>
+                    <p>Menjaga isi pesan dari siapapun yang tidak berhak membacanya</p>
                   </div>
                 </div>
                 <div class="row">
                   <div class="single-wc-content text-center col-md-12 wow fadeInUp">
-                    <span class="fa fa-users wc-icon"></span>
-                    <h4 class="wc-tittle">Manfaat eSignature 02</h4>
-                    <p>At vero eos et accusamus et iusto odio in dignissimos ducimus voluptatum in delenatque </p>
+                    <!-- <span class="fa fa-users wc-icon"></span> -->
+                    <h4 class="wc-tittle">Integritas data (data integrity)</h4>
+                    <p>Menjamin bahwa pesan masih asli atau belum pernah dimanipulasi selama pengiriman</p>
                   </div>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="row">
                   <div class="col-md-12">
-                    <img alt="manfaat esignature" src="assets/images/portfolio-img-small7.jpg" class="img-responsive img-full">
+                    <img alt="manfaat esignature" src="assets/images/manfaat-img.png" class="img-responsive img-full">
                   </div>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="row">
                   <div class="single-wc-content text-center col-md-12 wow fadeInUp">
-                    <span class="fa fa-line-chart wc-icon"></span>
-                    <h4 class="wc-tittle">Manfaat eSignature 03</h4>
-                    <p>At vero eos et accusamus et iusto odio in dignissimos ducimus voluptatum in delenatque </p>
+                    <!-- <span class="fa fa-line-chart wc-icon"></span> -->
+                    <h4 class="wc-tittle">Otentikasi (authentication)</h4>
+                    <p>Identifikasi kebenaran pihak-pihak yang berkomunikasi atau pihak-pihak yang berkorespondensi</p>
                   </div>
                 </div>
                 <div class="row">
                   <div class="single-wc-content text-center col-md-12 wow fadeInUp">
-                    <span class="fa fa-bus wc-icon"></span>
-                    <h4 class="wc-tittle">Manfaat eSignature 04</h4>
-                    <p>At vero eos et accusamus et iusto odio in dignissimos ducimus voluptatum in delenatque </p>
+                    <!-- <span class="fa fa-bus wc-icon"></span> -->
+                    <h4 class="wc-tittle">Nir Penyangkalan (non-repudiation)</h4>
+                    <p align="justify">Mencegah identitas yang berkorespondensi untuk melakukan penyangkalan terhadap pesan yang telah ia kirimkan, hal ini merupakan konsekuensi dari poin pertama dan kedua, apabila data dan identitas pengirim telah dapat diverifikasi, maka pengirim tidak dapat menyangkal telah menandatangani pesan tersebut, hal ini biasanya terdapat pada surat perjanjian</p>
                   </div>
                 </div>
               </div>
@@ -256,14 +280,14 @@
 
   <!-- Start video -->
   <section id="video">
-    <img src="assets/images/spanduk-bg.jpg" alt="img">
+    <img src="assets/images/spanduk-bg1.jpg" alt="img">
     <div class="call-to-overlay">
       <div class="container">
         <div class="call-to-content wow fadeInUp">
           <h2>eSignature Video</h2>
           <img alt="iphone" src="assets/images/iphone.png" class="img-responsive pos-center">
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/R-1MT2lf9hQ" frameborder="0" allowfullscreen style="margin: -416px 0 0 260px; width: 634px; max-height: 100px;"></iframe>
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/R-1MT2lf9hQ" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -294,51 +318,52 @@
             <div class="title-area">
               <h2 class="tittle">Flow Request</h2>
               <span class="tittle-line"></span>
-              <p>perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+              <p></p>
             </div>
             <!-- service content -->
             <div class="service-content">
               <ul class="service-table">
-                <li class="col-md-4 col-sm-6">
+                <li class="col-lg-4 col-md-6">
                   <div class="single-service wow slideInUp">
                     <span class="fa fa-edit service-icon"></span>
-                    <h4 class="service-title">UX Design</h4>
-                    <p>At vero eos et accusa mus odio in dignissimos ducimus qui anditiis the tatum</p>
+                    <!-- <h4 class="service-title">UX Design</h4> -->
+                    <p>Sertifikasi meminta individu (bila, tidak CA) membuatkan kunci sepasang kunci privat dan publik.</p>
                   </div>
                 </li>
-                <li class="col-md-4 col-sm-6">
+                <li class="col-lg-4 col-md-6">
                   <div class="single-service wow slideInUp">
                     <span class="fa fa-sort-amount-asc service-icon"></span>
-                    <h4 class="service-title">Strategy</h4>
-                    <p>At vero eos et accusa mus odio in dignissimos ducimus qui anditiis the tatum</p>
+                    <!-- <h4 class="service-title">Strategy</h4> -->
+                    <p>Pemohon paket informasi tambahan yang diperlukan untuk CA menerbitkan sertifikat (seperti bukti identitas, nomor ID pajak, alamat e-mail, dan sebagainya).</p>
                   </div>
                 </li>
-                <li class="col-md-4 col-sm-6">
+        
+                <li class="col-lg-4 col-md-6">
                  <div class="single-service wow slideInUp">
                     <span class="fa fa-map-o service-icon"></span>
-                    <h4 class="service-title">UI Design</h4>
-                    <p>At vero eos et accusa mus odio in dignissimos ducimus qui anditiis the tatum</p>
+                    <!-- <h4 class="service-title">UI Design</h4> -->
+                    <p>Pemohon mengirimkan kunci Umum dan informasi (sering dienkripsi menggunakan kunci publik CA) ke CA.</p>
                   </div>
                 </li>
-                <li class="col-md-4 col-sm-6">
+                <li class="col-lg-4 col-md-6">
                   <div class="single-service wow slideInUp">
                     <span class="fa fa-rocket service-icon"></span>
-                    <h4 class="service-title">Analystic</h4>
-                    <p>At vero eos et accusa mus odio in dignissimos ducimus qui anditiis the tatum</p>
+                    <!-- <h4 class="service-title">Analystic</h4> -->
+                    <p>CA menerapkan aturan kebijakan apa pun yang diperlukan untuk memverifikasi bahwa pemohon akan menerima sertifikat.</p>
                   </div>
                 </li>
-                <li class="col-md-4 col-sm-6">
+                <li class="col-lg-4 col-md-6">
                   <div class="single-service wow slideInUp">
                     <span class="fa fa-car service-icon"></span>
-                    <h4 class="service-title">Usibility</h4>
-                    <p>At vero eos et accusa mus odio in dignissimos ducimus qui anditiis the tatum</p>
+                    <!-- <h4 class="service-title">Usibility</h4> -->
+                    <p>CA membuat dokumen digital dengan informasi yang sesuai (kunci publik, tanggal kedaluwarsa, dan data lainnya) dan tanda-tanda ini menggunakan kunci privat CA.</p>
                   </div>
                 </li>
-                <li class="col-md-4 col-sm-6">
+                <li class="col-lg-4 col-md-6">
                   <div class="single-service wow slideInUp">
                     <span class="fa fa-bank service-icon"></span>
-                    <h4 class="service-title">Business solution</h4>
-                    <p>At vero eos et accusa mus odio in dignissimos ducimus qui anditiis the tatum</p>
+                    <!-- <h4 class="service-title">Business solution</h4> -->
+                    <p>CA mengirim/Posting sertifikat yang dimuat ke komputer secara individual.</p>
                   </div>
                 </li>
                 <!-- <li class="col-md-4 col-sm-6">
@@ -373,7 +398,7 @@
             <div class="title-area">
               <h2 class="tittle">News</h2>
               <span class="tittle-line"></span>
-              <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est</p>
+              <p></p>
             </div>
             <!-- From Blog content -->
             <div class="from-blog-content">
@@ -419,7 +444,7 @@
             <div class="title-area">
               <h2 class="tittle">Event</h2>
               <span class="tittle-line"></span>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto</p>
+              <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto</p> -->
             </div>
             <!-- Portfolio content -->
             <div class="portfolio-content">
@@ -470,14 +495,14 @@
   
 
   <!-- Start counter section -->
-  <section id="counter">
+  <!-- <section id="counter">
     <img src="assets/images/counter-bg.jpg" alt="img">
     <div class="counter-overlay">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12"> -->
             <!-- Start counter area -->
-            <div class="counter-area">
+            <!-- <div class="counter-area">
               <div class="col-md-3 col-sm-6 col-xs-6">
                 <div class="single-counter">
                   <span class="fa fa-users"></span>
@@ -519,10 +544,10 @@
         </div>
       </div>
     </div> 
-  </section>
+  </section> -->
   <!-- End counter section -->  
 
-  <section id="client">
+  <!-- <section id="client">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -545,12 +570,12 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- Start Contact section -->
   <section id="contact">
     <div class="container">
       <div class="row">
-        <div class="col-md-4 col-sm-6 col-xs-12">
+        <!-- <div class="col-md-4 col-sm-6 col-xs-12">
           <div class="contact-left wow fadeInLeft">
             <h2>Contact with us</h2>
             <address class="single-address">
@@ -572,19 +597,42 @@
               <p>Sales: sales@example.com</p>
             </address>
           </div>
-        </div>
-        <div class="col-md-8 col-sm-6 col-xs-12">
+        </div> -->
+        <div class="col-md-12">
           <div class="contact-right wow fadeInRight">
-            <h2>Send a message</h2>
+            <div class="title-area">
+              <h2 class="tittle">Request eSignature</h2>
+            </div>
             <form action="" class="contact-form">
-              <div class="form-group">                
-                <input type="text" class="form-control" placeholder="Name">
+              <div class="form-group">  
+                <label class="col-sm-3 control-label" for="nama">Nama</label> 
+                <div class="col-sm-8">             
+                  <input type="text" class="form-control" placeholder="Nama ..." required="">
+                </div>
               </div>
-              <div class="form-group">                
-                <input type="email" class="form-control" placeholder="Enter Email">
+              <div class="form-group">  
+                <label class="col-sm-3 control-label" for="nik">NIK</label>  
+                <div class="col-sm-8">               
+                  <input type="number" class="form-control" onkeypress="return isNumberKey(event)" placeholder="291003 ..." required="">
+                </div>
+              </div>  
+              <div class="form-group">   
+                <label class="col-sm-3 control-label" for="phone">Nomor Telepon</label>  
+                <div class="col-sm-8">               
+                  <input type="number" class="form-control" onkeypress="return isNumberKey(event)" placeholder="0811 ..." required="">
+                </div>
+              </div>  
+              <div class="form-group">  
+                <label class="col-sm-3 control-label" for="email">Email</label> 
+                <div class="col-sm-8">                   
+                  <input type="email" class="form-control" placeholder="user@email.co ..." required="">
+                </div>
               </div>              
               <div class="form-group">
-                <textarea class="form-control"></textarea>
+                <label class="col-sm-3 control-label" for="phone1">Alamat</label>
+                <div class="col-sm-8">   
+                  <textarea class="form-control" type="text" rows="3" placeholder="Jl. Raya..." required=""></textarea>
+                </div>
               </div>
               <button type="submit" data-text="SUBMIT" class="button button-default"><span>SUBMIT</span></button>
             </form>
@@ -622,7 +670,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Designed by <a rel="nofollow" href="http://www.divrow.com/">Naine Visual &copy; 2016</a></p>
+      <p>Designed &amp; Developed by <a rel="nofollow" href="#">KOMINFO &copy; 2016</a></p>
     </div>
   </footer>
   <!-- End Footer -->
@@ -652,4 +700,4 @@
 
 <script type="text/javascript">
   
-</script>>
+</script>
