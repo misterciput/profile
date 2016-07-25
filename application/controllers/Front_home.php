@@ -21,10 +21,13 @@ class Front_home extends CI_Controller {
 
 	public function get_news_detail($id){
 		$result = $this->artikel->get_news_detail($id)[0];
+		$upcoming = $this->artikel->get_upcoming_news();
 		$data = array();
 		$data['judul'] = $result->judul;
 		$data['isi'] = $result->isi;
 		$data['tanggal'] = $result->tanggal;
+		$data['img'] = $result->img;
+		$data['upcoming'] = $upcoming;
 		$this->load->view('view_news', $data);
 	}
 }

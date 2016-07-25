@@ -196,7 +196,7 @@
 
   <section id="blog-banner">
 
-    <img src="<?=base_url()?>assets/images/news-bg.jpg" alt="img">
+    <img src="<?=base_url()?>assets/images/<?=$img?>" alt="img">
 
     <div class="blog-overlay">
 
@@ -266,7 +266,7 @@
 
                     <figure>
 
-                      <a href="blog-single.html"><img alt="img" src="<?=base_url()?>assets/images/the-sky.jpg"></a>
+                      <a href="blog-single.html"><img alt="img" src="<?=base_url()?>assets/images/<?=$img?>"></a>
 
                     </figure>
 
@@ -353,14 +353,14 @@
                     <h2>Latest News</h2>
 
                     <div class="popular-post-widget">
-
+                    <?php foreach($upcoming as $key => $news){?>
                       <div class="media">
 
                           <div class="media-left">
 
                             <a href="blog-single.html">
 
-                              <img class="media-object" src="<?=base_url()?>assets/images/popular-post-img.jpg" alt="img">
+                              <img class="media-object" src="<?=base_url()?>assets/images/<?=$news->img?>" alt="img">
 
                             </a>
 
@@ -368,57 +368,14 @@
 
                           <div class="media-body">
 
-                            <h4 class="media-heading"><a href="blog-single.html">A lonely flower</a></h4>
+                            <h4 class="media-heading"><a href="blog-single.html"><?=$news->judul?></a></h4>
 
-                            <p>Sed ut perspiciatis omnis natus error sit voluptatem accusantium done.</p>
+                            <?=substr($news->isi, 0, 100)?> ... <a href="<?=base_url()?>Front_home/get_news_detail/<?=$news->id?>"><span>Read More</span></a>
 
                           </div>
 
                       </div>
-
-                      <div class="media">
-
-                        <div class="media-left">
-
-                          <a href="blog-single.html">
-
-                            <img class="media-object" src="<?=base_url()?>assets/images/popular-post-img.jpg" alt="img">
-
-                          </a>
-
-                        </div>
-
-                        <div class="media-body">
-
-                          <h4 class="media-heading"><a href="blog-single.html">A lonely flower</a></h4>
-
-                          <p>Sed ut perspiciatis omnis natus error sit voluptatem accusantium done.</p>
-
-                        </div>
-
-                      </div>
-
-                      <div class="media">
-
-                        <div class="media-left">
-
-                          <a href="blog-single.html">
-
-                            <img class="media-object" src="<?=base_url()?>assets/images/popular-post-img.jpg" alt="img">
-
-                          </a>
-
-                        </div>
-
-                        <div class="media-body">
-
-                          <h4 class="media-heading"><a href="blog-single.html">A lonely flower</a></h4>
-
-                          <p>Sed ut perspiciatis omnis natus error sit voluptatem accusantium done.</p>
-
-                        </div>
-
-                      </div>
+                      <?php } ?>
 
                       <div class="media">
 
