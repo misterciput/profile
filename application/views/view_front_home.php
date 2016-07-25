@@ -409,13 +409,13 @@
                 <div class="col-md-4">
                   <article class="single-from-blog">
                     <figure>
-                      <a href="blog-single.html"><img src="assets/img/<?=$hn->img?>" alt="img"></a>
+                      <a href="<?=base_url()?>Front_home/get_news_detail/<?=$hn->id?>"><img src="assets/img/<?=$hn->img?>" alt="img"></a>
                     </figure>
                     <div class="blog-title">
-                      <h2><a href="blog-single.html"><?=$hn->judul;?></a></h2>
+                      <h2><a href="<?=base_url()?>Front_home/get_news_detail/<?=$hn->id?>"><?=$hn->judul;?></a></h2>
                       <p>Posted by <a class="blog-admin" href="#">admin</a> on <span class="blog-date"><?=date('d F Y', strtotime($hn->tanggal))?></span></p>
                     </div>
-                    <?=substr($hn->isi, 0, 200)?> .... <a href="#"><span>Read More</span></a>
+                    <?=substr($hn->isi, 0, 200)?> .... <a href="<?=base_url()?>Front_home/get_news_detail/<?=$hn->id?>"><span>Read More</span></a>
                     <div class="blog-footer">
                       <!-- <a href="#"><span class="fa fa-comment"></span>18 Comments</a>
                       <a href="#"><span class="fa fa-thumbs-o-up"></span>35 Likes</a> 

@@ -18,4 +18,13 @@ class Front_home extends CI_Controller {
 		$data['all_event'] = $this->event->get_all_active_event();
 		$this->load->view('view_front_home', $data);
 	}
+
+	public function get_news_detail($id){
+		$result = $this->artikel->get_news_detail($id)[0];
+		$data = array();
+		$data['judul'] = $result->judul;
+		$data['isi'] = $result->isi;
+		$data['tanggal'] = $result->tanggal;
+		$this->load->view('view_news', $data);
+	}
 }
