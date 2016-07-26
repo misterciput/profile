@@ -53,4 +53,14 @@ class Md_event extends CI_Model {
 
 		return $result->result();	
 	}
+
+	public function get_event_detail($id){
+ 		$this->db->from('event');
+ 		$this->db->where('active', 1);
+ 		$this->db->order_by('id','desc');
+ 		$this->db->where('id', $id);
+ 		$result = $this->db->get();
+ 
+ 		return $result->result(); 
+ 	}
 }

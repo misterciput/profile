@@ -30,4 +30,16 @@ class Front_home extends CI_Controller {
 		$data['upcoming'] = $upcoming;
 		$this->load->view('view_news', $data);
 	}
+
+	public function get_event_detail($id){
+ 		$result = $this->event->get_event_detail($id)[0];
+ 		$upcoming = $this->event->get_upcoming_event();
+ 		$data = array();
+ 		$data['title'] = $result->title;
+ 		$data['description'] = $result->description;
+ 		$data['date'] = $result->date;
+ 		$data['pict'] = $result->pict;
+ 		$data['upcoming'] = $upcoming;
+ 		$this->load->view('view_events', $data);
+ 	}
 }

@@ -471,7 +471,7 @@
                      <div class="single-item-content">
                         <div class="portfolio-social-icon">
                           <a class="fancybox" data-fancybox-group="gallery" href="<?=base_url()?>assets/img/<?=$ae->pict?>"><i class="fa fa-eye"></i></a>
-                          <a class="link-btn" href="#"><i class="fa fa-link"></i></a>
+                          <a class="link-btn" href="<?=base_url()?>Front_home/get_event_detail/<?=$ae->id?>"><i class="fa fa-link"></i></a>
                         </div>
                         <div class="portfolio-title">
                           <h4><?=$ae->title?></h4>
