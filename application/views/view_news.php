@@ -156,7 +156,7 @@
 
           <!-- LOGO --> 
 
-           <a class="navbar-brand logo" href="index.html"><img src="<?=base_url()?>assets/images/logo1.png" alt="logo"></a>                      
+           <a class="navbar-brand logo" href="<?=base_url()?>Front_home"><img src="<?=base_url()?>assets/images/logo1.png" alt="logo"></a>                      
 
         </div>
 
@@ -196,7 +196,7 @@
 
   <section id="blog-banner">
 
-    <img src="<?=base_url()?>assets/images/<?=$img?>" alt="img">
+    <img src="<?=base_url()?>assets/images/banner-top.jpg" alt="img" height="" width="100%">
 
     <div class="blog-overlay">
 
@@ -212,7 +212,7 @@
 
               <ol class="breadcrumb">
 
-                <li><a href="">Home</a></li>                
+                <li><a href="<?=base_url()?>Front_home">Home</a></li>                
 
                 <li class="active">News</li>
 
@@ -266,7 +266,7 @@
 
                     <figure>
 
-                      <a href="blog-single.html"><img alt="img" src="<?=base_url()?>assets/images/<?=$img?>"></a>
+                      <a href="blog-single.html"><img alt="img" src="<?=base_url()?>assets/img/<?=$img?>"></a>
 
                     </figure>
 
@@ -360,7 +360,7 @@
 
                             <a href="blog-single.html">
 
-                              <img class="media-object" src="<?=base_url()?>assets/images/<?=$news->img?>" alt="img">
+                              <img class="media-object" src="<?=base_url()?>assets/img/<?=$news->img?>" alt="img" height="130%" width="120%">
 
                             </a>
 
@@ -368,7 +368,7 @@
 
                           <div class="media-body">
 
-                            <h4 class="media-heading"><a href="blog-single.html"><?=$news->judul?></a></h4>
+                            <h4 class="media-heading"><a href="<?=base_url()?>Front_home/get_news_detail/<?=$news->id?>"><?=$news->judul?></a></h4>
 
                             <?=substr($news->isi, 0, 100)?> ... <a href="<?=base_url()?>Front_home/get_news_detail/<?=$news->id?>"><span>Read More</span></a>
 
