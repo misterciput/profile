@@ -266,7 +266,7 @@
 
                     <figure>
 
-                      <a href="blog-single.html"><img alt="img" src="<?=base_url()?>assets/img/<?=$img?>"></a>
+                      <img alt="img" src="<?=base_url()?>assets/img/<?=$img?>">
 
                     </figure>
 
@@ -358,7 +358,7 @@
 
                           <div class="media-left">
 
-                            <a href="blog-single.html">
+                            <a href="<?=base_url()?>Front_home/get_news_detail/<?=$news->id?>">
 
                               <img class="media-object" src="<?=base_url()?>assets/img/<?=$news->img?>" alt="img" height="130%" width="120%">
 

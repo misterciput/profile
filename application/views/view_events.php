@@ -156,7 +156,7 @@
 
           <!-- LOGO --> 
 
-           <a class="navbar-brand logo" href="index.html"><img src="<?=base_url()?>assets/images/logo1.png" alt="logo"></a>                      
+           <a class="navbar-brand logo" href="<?=base_url()?>Front_home"><img src="<?=base_url()?>assets/images/logo1.png" alt="logo"></a>                      
 
         </div>
 
@@ -196,7 +196,7 @@
 
   <section id="blog-banner">
 
-    <img src="<?=base_url()?>assets/images/<?=$pict?>" alt="img">
+    <img src="<?=base_url()?>assets/images/banner-top.jpg" alt="img" height="" width="100%">
 
     <div class="blog-overlay">
 
@@ -212,7 +212,7 @@
 
               <ol class="breadcrumb">
 
-                <li><a href="">Home</a></li>                
+                <li><a href="<?=base_url()?>Front_home">Home</a></li>                
 
                 <li class="active">event</li>
 
@@ -266,7 +266,7 @@
 
                     <figure>
 
-                      <a href="blog-single.html"><img alt="img" src="<?=base_url()?>assets/images/<?=$pict?>"></a>
+                      <a href="blog-single.html"><img alt="img" src="<?=base_url()?>assets/img/<?=$pict?>"></a>
 
                     </figure>
 
@@ -358,9 +358,9 @@
 
                           <div class="media-left">
 
-                            <a href="blog-single.html">
+                            <a href="<?=base_url()?>Front_home/get_event_detail/<?=$event->id?>">
 
-                              <img class="media-object" src="<?=base_url()?>assets/images/<?=$event->pict?>" alt="img">
+                              <img class="media-object" src="<?=base_url()?>assets/img/<?=$event->pict?>" alt="img" height="130%" width="120%">
 
                             </a>
 
@@ -368,7 +368,7 @@
 
                           <div class="media-body">
 
-                            <h4 class="media-heading"><a href="blog-single.html"><?=$event->title?></a></h4>
+                            <h4 class="media-heading"><a href="<?=base_url()?>Front_home/get_event_detail/<?=$event->id?>"><?=$event->title?></a></h4>
 
                             <?=substr($event->description, 0, 100)?> ... <a href="<?=base_url()?>Front_home/get_event_detail/<?=$event->id?>"><span>Read More</span></a>
 
@@ -399,7 +399,7 @@
 
                   <div class="single-widget">
 
-                    <h2>Events</h2>
+                    <h2>News</h2>
 
                     
 
