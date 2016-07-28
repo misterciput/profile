@@ -32,7 +32,7 @@ class Md_event extends CI_Model {
 		$this->db->delete('event', array('id' => $id));
 	}
 
-	public function get_upcoming_event(){
+	public function get_upcoming_event_now(){
 		$month = date('m');
 		$now = date('Y-m-d');
 		$this->db->from('event');
@@ -63,4 +63,14 @@ class Md_event extends CI_Model {
  
  		return $result->result(); 
  	}
+
+ 	public function get_upcoming_event(){
+		$this->db->from('event');
+		$this->db->where('active', 1);
+		$this->db->order_by('id','desc');
+		$this->db->limit(3);
+		$result = $this->db->get();
+
+		return $result->result(); 
+	}
 }

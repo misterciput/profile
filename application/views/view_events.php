@@ -34,7 +34,7 @@
 
     
 
-    <title>event - Digital Signature | KOMINFO</title>
+    <title>Event - Digital Signature | KOMINFO</title>
 
     <!-- Favicon -->
 
@@ -196,7 +196,7 @@
 
   <section id="blog-banner">
 
-    <img src="<?=base_url()?>assets/images/banner-top.jpg" alt="img" height="" width="100%">
+    <img src="<?=base_url()?>assets/images/news-bg.jpg" alt="img">
 
     <div class="blog-overlay">
 
@@ -266,7 +266,7 @@
 
                     <figure>
 
-                      <a href="blog-single.html"><img alt="img" src="<?=base_url()?>assets/img/<?=$pict?>"></a>
+                      <img alt="img" src="<?=base_url()?>assets/img/<?=$pict?>">
 
                     </figure>
 
@@ -354,6 +354,7 @@
 
                     <div class="popular-post-widget">
                     <?php foreach($upcoming as $key => $event){?>
+                      
                       <div class="media">
 
                           <div class="media-left">

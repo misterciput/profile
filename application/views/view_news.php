@@ -166,7 +166,7 @@
 
             <li><a href="">Home</a></li>                   
 
-            <li class="active"><a href="news-all.html">VIEW ALL NEWS </a></li>
+            <li><a href="">VIEW ALL NEWS </a></li>
 
           </ul>                            
 
@@ -196,7 +196,7 @@
 
   <section id="blog-banner">
 
-    <img src="<?=base_url()?>assets/images/banner-top.jpg" alt="img" height="" width="100%">
+    <img src="<?=base_url()?>assets/images/news-bg.jpg" alt="img">
 
     <div class="blog-overlay">
 
