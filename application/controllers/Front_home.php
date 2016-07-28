@@ -23,6 +23,7 @@ class Front_home extends CI_Controller {
 		$result = $this->artikel->get_news_detail($id)[0];
 		$upcoming = $this->artikel->get_upcoming_news();
 		$data = array();
+		$data['id'] = $id;
 		$data['judul'] = $result->judul;
 		$data['isi'] = $result->isi;
 		$data['tanggal'] = $result->tanggal;
@@ -41,5 +42,9 @@ class Front_home extends CI_Controller {
  		$data['pict'] = $result->pict;
  		$data['upcoming'] = $upcoming;
  		$this->load->view('view_events', $data);
+ 	}
+
+ 	public function view_all_news(){
+ 		$this->load->view('view_news_all');
  	}
 }

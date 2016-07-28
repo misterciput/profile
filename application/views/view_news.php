@@ -353,7 +353,9 @@
                     <h2>Latest News</h2>
 
                     <div class="popular-post-widget">
-                    <?php foreach($upcoming as $key => $news){?>
+                    <?php foreach($upcoming as $key => $news){
+                      if($id != $news->id){
+                    ?>
                       <div class="media">
 
                           <div class="media-left">
@@ -375,13 +377,15 @@
                           </div>
 
                       </div>
-                      <?php } ?>
+                      <?php }
+                      } 
+                      ?>
 
                       <div class="media">
 
                         <div class="media-body">
 
-                            <a href="news-all.html" class="button button-default" data-text="View All" type="submit"><span>View All</span></a>
+                            <a href="<?=base_url()?>front_home/view_all_news" class="button button-default" data-text="View All" type="submit"><span>View All</span></a>
 
                         </div>
 
