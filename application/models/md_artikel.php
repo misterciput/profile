@@ -60,7 +60,7 @@ class Md_artikel extends CI_Model {
 		$this->db->where('kategori','NEWS');
 		$this->db->where('show', 1);
 		$this->db->order_by('id','desc');
-		$this->db->limit(3);
+		$this->db->limit(4);
 		$result = $this->db->get();
 
 		return $result->result(); 

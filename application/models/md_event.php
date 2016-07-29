@@ -68,7 +68,7 @@ class Md_event extends CI_Model {
 		$this->db->from('event');
 		$this->db->where('active', 1);
 		$this->db->order_by('id','desc');
-		$this->db->limit(3);
+		$this->db->limit(4);
 		$result = $this->db->get();
 
 		return $result->result(); 
