@@ -212,7 +212,7 @@
 
               <ol class="breadcrumb">
 
-                <li><a href="<?=base_url()?>Front_home">Home</a></li>                
+                <li>Home</li>                
 
                 <li class="active">event</li>
 
@@ -350,10 +350,11 @@
 
                   <div class="single-widget">
 
-                    <h2>Latest event</h2>
+                    <h2>Latest Event</h2>
 
                     <div class="popular-post-widget">
-                    <?php foreach($upcoming as $key => $event){?>
+                    <?php foreach($upcoming as $key => $event){if($id != $event->id){
+                      ?>
                       
                       <div class="media">
 
@@ -376,7 +377,9 @@
                           </div>
 
                       </div>
-                      <?php } ?>
+                      <?php } 
+                      }
+                      ?>
 
                       <div class="media">
 
