@@ -65,4 +65,20 @@ class Md_artikel extends CI_Model {
 
 		return $result->result(); 
 	}
+
+	public function get_all_news($num, $offset){
+		$this->db->where('kategori','NEWS');
+		$this->db->where('show', 1);
+		$this->db->order_by('id','desc');
+		$this->db->limit($num, $offset);
+		$result = $this->db->get('artikel');
+
+		return $result->result(); 
+	}
+
+	public function count_all_news(){
+		$this->db->where('kategori','NEWS');
+		$this->db->where('show', 1);
+		return $this->db->count_all('artikel');
+	}
 }

@@ -46,6 +46,36 @@ class Front_home extends CI_Controller {
  	}
 
  	public function view_all_news(){
- 		$this->load->view('view_news_all');
+ 		//
+
+ 		$this->load->library('pagination');
+
+ 		$config['base_url'] = base_url().'front_home/view_all_news';
+ 		$config["total_rows"] = $this->artikel->count_all_news();
+ 		$config['per_page'] = $per_page = 3;
+ 		$config['uri_segment'] = 3;
+ 		$config['full_tag_open'] = '<nav ><ul class="pagination blog-pagination">';
+		$config['full_tag_close'] = '</ul><nav>';
+ 		$config['first_tag_open'] = '<li>';
+		$config['first_tag_close'] = '</li>';
+		$config['prev_link'] = 'PREVIOUS';
+		$config['prev_tag_open'] = '<li class="prev">';
+		$config['prev_tag_close'] = '</li>';
+		$config['next_link'] = 'NEXT';
+		$config['next_tag_open'] = '<li>';
+		$config['next_tag_close'] = '</li>';
+		$config['last_tag_open'] = '<li>';
+		$config['last_tag_close'] = '</li>';
+		$config['cur_tag_open'] =  '<li class="active"><a href="#">';
+		$config['cur_tag_close'] = '</a></li>';
+		$config['num_tag_open'] = '<li>';
+		$config['num_tag_close'] = '</li>';
+
+ 		$this->pagination->initialize($config);
+ 		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+ 		$data['data'] = $this->artikel->get_all_news($per_page, $page);
+ 		$data['paging'] = $this->pagination->create_links();
+
+ 		$this->load->view('view_news_all', $data);
  	}
 }

@@ -245,106 +245,41 @@
                 <div class="blog-left blog-archive">
 
                   <!-- Start single blog post -->
-
+                  <?php foreach($data as $key => $row){?>
                   <article class="single-from-blog">
 
                     <figure>
 
-                      <a href="blog-single.html"><img alt="img" src="<?=base_url()?>assets/images/the-sky.jpg"></a>
+                      <a href="blog-single.html"><img alt="img" src="<?=base_url()?>assets/img/<?=$row->img?>"></a>
 
                     </figure>
 
                     <div class="blog-title">
 
-                      <h2><a href="blog-single.html">Here is the post title</a></h2>
+                      <h2><a href="blog-single.html"><?=$row->judul?></a></h2>
 
-                      <p>Posted by <a href="#" class="blog-admin">admin</a> on <span class="blog-date">23rd july 2015</span></p>
+                      <p>Posted by <a href="#" class="blog-admin">admin</a> on <span class="blog-date"><?=date('d F Y', strtotime($row->tanggal))?></span></p>
 
                     </div>
 
-                    <p>Sed ut perspiciatis unde mnis is te natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis. Quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
+                    <?=$row->isi?>
 
                     <div class="blog-footer">
 
-                      <a href="#"><span class="fa fa-comment"></span>18 Comments</a>
-
-                      <a href="#"><span class="fa fa-thumbs-o-up"></span>35 Likes</a>
+                      
 
                     </div>
 
                   </article>
+                  <?php } ?>
 
-                  <!-- End single blog post -->
+                 
 
-                  <!-- Start single blog post -->
-
-                  <article class="single-from-blog">
-
-                    <figure>
-
-                      <a href="blog-single.html"><img alt="img" src="<?=base_url()?>assets/images/the-sky.jpg"></a>
-
-                    </figure>
-
-                    <div class="blog-title">
-
-                      <h2><a href="blog-single.html">Here is the post title</a></h2>
-
-                      <p>Posted by <a href="#" class="blog-admin">admin</a> on <span class="blog-date">23rd july 2015</span></p>
-
-                    </div>
-
-                    <p>Sed ut perspiciatis unde mnis is te natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis. Quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
-
-                    <div class="blog-footer">
-
-                      <a href="#"><span class="fa fa-comment"></span>18 Comments</a>
-
-                      <a href="#"><span class="fa fa-thumbs-o-up"></span>35 Likes</a>
-
-                    </div>
-
-                  </article>
-
-                  <!-- End single blog post -->
-
-                  <!-- Start single blog post -->
-
-                  <article class="single-from-blog">
-
-                    <figure>
-
-                      <a href="blog-single.html"><img alt="img" src="<?=base_url()?>assets/images/the-sky.jpg"></a>
-
-                    </figure>
-
-                    <div class="blog-title">
-
-                      <h2><a href="blog-single.html">Here is the post title</a></h2>
-
-                      <p>Posted by <a href="#" class="blog-admin">admin</a> on <span class="blog-date">23rd july 2015</span></p>
-
-                    </div>
-
-                    <p>Sed ut perspiciatis unde mnis is te natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis. Quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
-
-                    <div class="blog-footer">
-
-                      <a href="#"><span class="fa fa-comment"></span>18 Comments</a>
-
-                      <a href="#"><span class="fa fa-thumbs-o-up"></span>35 Likes</a>
-
-                    </div>
-
-                  </article>
-
-                  <!-- End single blog post -->
-
-
+                  <?=$paging?>
 
                   <!--Start Blog pagination -->
 
-                  <nav>
+                  <!-- <nav>
 
                     <ul class="pagination blog-pagination">
 
@@ -380,7 +315,7 @@
 
                     </ul>
 
-                  </nav>
+                  </nav> -->
 
                   <!-- End blog pagination -->
 
