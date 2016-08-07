@@ -37,7 +37,7 @@ class Md_artikel extends CI_Model {
 		$this->db->where('kategori','NEWS');
 		$this->db->where('headline', 1);
 		$this->db->where('show', 1);
-		$this->db->order_by('id','desc');
+		$this->db->order_by('tanggal','desc');
 		$result = $this->db->get();
 
 		return $result->result(); 
@@ -48,7 +48,7 @@ class Md_artikel extends CI_Model {
 		$this->db->where('kategori','NEWS');
 		$this->db->where('headline', 1);
 		$this->db->where('show', 1);
-		$this->db->order_by('id','desc');
+		$this->db->order_by('tanggal','desc');
 		$this->db->where('id', $id);
 		$result = $this->db->get();
 
@@ -59,7 +59,18 @@ class Md_artikel extends CI_Model {
 		$this->db->from('artikel');
 		$this->db->where('kategori','NEWS');
 		$this->db->where('show', 1);
-		$this->db->order_by('id','desc');
+		$this->db->order_by('tanggal','desc');
+		$this->db->limit(4);
+		$result = $this->db->get();
+
+		return $result->result(); 
+	}
+
+	public function get_next_news(){
+		$this->db->from('artikel');
+		$this->db->where('kategori','NEWS');
+		$this->db->where('show', 1);
+		$this->db->order_by('tanggal','desc');
 		$this->db->limit(4);
 		$result = $this->db->get();
 
@@ -69,7 +80,7 @@ class Md_artikel extends CI_Model {
 	public function get_all_news($num, $offset){
 		$this->db->where('kategori','NEWS');
 		$this->db->where('show', 1);
-		$this->db->order_by('id','desc');
+		$this->db->order_by('tanggal','desc');
 		$this->db->limit($num, $offset);
 		$result = $this->db->get('artikel');
 

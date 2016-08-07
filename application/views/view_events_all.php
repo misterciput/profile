@@ -74,8 +74,6 @@
 
 
 
-
-
     <!-- Fonts -->
 
     <!-- Open Sans for body font -->
@@ -101,10 +99,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
     <![endif]-->
-
-
-
-
 
   </head>
 
@@ -154,7 +148,7 @@
 
           </button>
 
-          <!-- LOGO --> 
+          <!-- LOGO -->
 
            <a class="navbar-brand logo" href="<?=base_url()?>Front_home"><img src="<?=base_url()?>assets/images/logo1.png" alt="logo"></a>                      
 
@@ -164,13 +158,21 @@
 
           <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
 
-            <li><button href="" onclick="location.href='<?=base_url()?>Front_home';">Home</button></li> 
-                         
-            <li class=""><button href="" onclick="location.href='<?=base_url()?>front_home/view_all_events';">VIEW ALL EVENT </button></li>
+            <li><button href="" onclick="location.href='<?=base_url()?>Front_home';">Home</button></li>            
 
           </ul>                            
 
         </div><!--/.nav-collapse -->
+
+        <!-- <div id="navbar" class="navbar-collapse collapse">
+
+          <ul id="top-menu" class="nav navbar-nav menu-scroll">
+
+            <li><a href="<?=base_url()?>">Home</a></li>                   
+
+          </ul>                            
+
+        </div> --><!--/.nav-collapse -->
 
        <div class="search-area">
 
@@ -208,13 +210,13 @@
 
             <div class="blog-banner-area">
 
-              <h2>EVENT</h2>
+              <h2>Event All</h2>
 
               <ol class="breadcrumb">
 
-                <li>Home</li>                
+                <li><a href="<?=base_url()?>Front_home">Home</a></li>                
 
-                <li class="active">Event</li>
+                <li class="active">Event All</li>
 
               </ol>
 
@@ -250,65 +252,82 @@
 
               <div class="col-lg-8 col-md-7 col-sm-12">
 
-                <div class="blog-left blog-details">
+                <div class="blog-left blog-archive">
 
                   <!-- Start single blog post -->
-
-                  <article class="single-from-blog">                    
-
-                    <div class="blog-title">
-
-                      <h2><?=$title?></h2>
-
-                      <p>Posted by <a href="#" class="blog-admin">admin</a> on <span class="blog-date"><?=date('d F Y', strtotime($date))?></span></p>
-
-                    </div>
+                  <?php foreach($data as $key => $row){?>
+                  <article class="single-from-blog">
 
                     <figure>
 
-                      <img alt="img" src="<?=base_url()?>assets/img/<?=$pict?>">
+                      <img alt="img" src="<?=base_url()?>assets/img/<?=$row->pict?>">
 
                     </figure>
 
-                   <div class="blog-details-content">
+                    <div class="blog-title">
 
-                      <?=$description?> 
+                      <h2><a href="<?=base_url()?>Front_home/get_event_detail/<?=$row->id?>"><?=$row->title?></a></h2>
 
-                   </div>                  
+                      <p>Posted by <a href="#" class="blog-admin">admin</a> on <span class="blog-date"><?=date('d F Y', strtotime($row->date))?></span></p>
+
+                    </div>
+
+                    <?=substr($row->description, 0, 300)?> ... <a href="<?=base_url()?>Front_home/get_event_detail/<?=$row->id?>"><span>Read More</span></a>
+
+                    <div class="blog-footer">
+
+                      
+
+                    </div>
 
                   </article>
+                  <?php } ?>
 
-                  <!-- <div class="blog-comment">
+                 
 
-                    <h2>Post a comment</h2>
+                  <?=$paging?>
 
-                    <form class="comment-form" action="">
+                  <!--Start Blog pagination -->
 
-                      <div class="form-group">                
+                  <!-- <nav>
 
-                        <input type="text" placeholder="Name" class="form-control">
+                    <ul class="pagination blog-pagination">
 
-                      </div>
+                      <li>
 
-                      <div class="form-group">                
+                        <a href="#" aria-label="Previous">
 
-                        <input type="email" placeholder="Enter Email" class="form-control">
+                          <span aria-hidden="true">&laquo;</span>
 
-                      </div>              
+                        </a>
 
-                      <div class="form-group">
+                      </li>
 
-                        <textarea class="form-control"></textarea>
+                      <li><a href="#">1</a></li>
 
-                      </div>
+                      <li><a href="#">2</a></li>
 
-                      <button class="button button-default" data-text="Comment" type="submit"><span>Comment</span></button>
+                      <li><a href="#">3</a></li>
 
-                    </form>
+                      <li><a href="#">4</a></li>
 
-                  </div> -->
+                      <li><a href="#">5</a></li>
 
-                  <!-- End single blog post -->                  
+                      <li>
+
+                        <a href="#" aria-label="Next">
+
+                          <span aria-hidden="true">&raquo;</span>
+
+                        </a>
+
+                      </li>
+
+                    </ul>
+
+                  </nav> -->
+
+                  <!-- End blog pagination -->
 
                 </div>
 
@@ -338,58 +357,7 @@
 
                       <a class="linkedin" href="#"><span class="fa fa-linkedin"></span></a>
 
-                      
-
-                    </div>
-
-                  </div>
-
-                  <!-- End Sidebar Single widget -->
-
-                  <!-- Start Sidebar Single widget -->
-
-                  <div class="single-widget">
-
-                    <h2>Latest Event</h2>
-
-                    <div class="popular-post-widget">
-                    <?php foreach($upcoming as $key => $event){if($id != $event->id){
-                      ?>
-                      
-                      <div class="media">
-
-                          <div class="media-left">
-
-                            <a href="<?=base_url()?>Front_home/get_event_detail/<?=$event->id?>">
-
-                              <img class="media-object" src="<?=base_url()?>assets/img/<?=$event->pict?>" alt="img" height="130%" width="120%">
-
-                            </a>
-
-                          </div>
-
-                          <div class="media-body">
-
-                            <h4 class="media-heading"><a href="<?=base_url()?>Front_home/get_event_detail/<?=$event->id?>"><?=$event->title?></a></h4>
-
-                            <?=substr($event->description, 0, 100)?> ... <a href="<?=base_url()?>Front_home/get_event_detail/<?=$event->id?>"><span>Read More</span></a>
-
-                          </div>
-
-                      </div>
-                      <?php } 
-                      }
-                      ?>
-
-                      <div class="media">
-
-                        <div class="media-body">
-
-                            <a href="<?=base_url()?>front_home/view_all_events" class="button button-default" data-text="View All" type="submit"><span>View All</span></a>
-
-                        </div>
-
-                      </div>
+                      <a class="dribbble" href="#"><span class="fa fa-dribbble"></span></a>
 
                     </div>
 
@@ -409,22 +377,17 @@
 
                     <div class="instagram-feed">
 
-                    
-
-                    <?php foreach($nextnews as $key => $news){if($id != $news->id){
-                      ?>
-
-                    
+                      
 
                       <div class="single-instagram-feed">
 
-                        <a href="<?=base_url()?>Front_home/get_news_detail/<?=$news->id?>">
+                        <a href="#">
 
-                          <img src="<?=base_url()?>assets/img/<?=$news->img?>" alt="img">
+                          <img src="<?=base_url()?>assets/images/instagram-feed-img.jpg" alt="img">
 
                           <div class="event-caption">
 
-                            <p><?=$news->judul?></p>
+                            <p>Sosialisasi Tandatangan Digital</p>
 
                           </div>
 
@@ -433,9 +396,45 @@
                       </div>
 
                     
-                      <?php } 
-                      }
-                    ?>
+
+                    
+
+                      <div class="single-instagram-feed">
+
+                        <a href="#">
+
+                          <img src="<?=base_url()?>assets/images/instagram-feed-img.jpg" alt="img">
+
+                          <div class="event-caption">
+
+                            <p>Sosialisasi Tandatangan Digital</p>
+
+                          </div>
+
+                        </a>
+
+                      </div>
+
+                    
+
+                    
+
+                      <div class="single-instagram-feed">
+
+                        <a href="#">
+
+                          <img src="<?=base_url()?>assets/images/instagram-feed-img.jpg" alt="img">
+
+                          <div class="event-caption">
+
+                            <p>Sosialisasi Tandatangan Digital</p>
+
+                          </div>
+
+                        </a>  
+
+                      </div>
+
                       
 
                     </div>
@@ -448,11 +447,11 @@
 
                   <!-- Start Sidebar Single widget -->
 
-                  <!-- <div class="single-widget">
+                  <div class="single-widget">
 
-                    <img alt="banner" src="assets/images/about-img.png" class="img-responsive">
+                    <img alt="banner" src="<?=base_url()?>assets/images/about-img.png" class="img-responsive">
 
-                  </div> -->
+                  </div>
 
                   <!-- End Sidebar Single widget -->
 
@@ -567,10 +566,6 @@
   <!-- Custom js -->
 
   <script type="text/javascript" src="<?=base_url()?>assets/js/custom.js"></script>
-
-
-
-
 
   </body>
 

@@ -5,6 +5,14 @@ KOMINFO - Digital Signature
 body{
 	font-size: 14px;
 }
+a{
+	color:#0c77b6;
+	transition: all 0.2s ease 0s;
+}
+a:hover, a:focus{
+	color:#37c6f5;
+	text-decoration: none;
+}
 .logo{
 	margin-right:0;
 	width:100%;
@@ -49,9 +57,32 @@ body{
 .navbar-default .navbar-nav > li > a {
 	color:#24346c;
 }
+.navbar-default .navbar-nav > li > button {
+	color:#24346c;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.navbar-default .navbar-nav > .active > button,
+.navbar-default .navbar-nav > .active > button:hover,
+.navbar-default .navbar-nav > .active > button:focus {
+  background-color: transparent;
+  color:#37c6f5;
+}
+.navbar-default .navbar-nav > li > button:hover,
+.navbar-default .navbar-nav > li > button:focus {
+    background-color: transparent;
+    color:#37c6f5;
+}
 
 .single-item > img {
 	width: auto;
+}
+.single-from-blog figure img{
+	width:100%;
+	height:auto;
 }
 #header{
 	background:#24346c;
@@ -183,6 +214,9 @@ body{
 .blog-banner-area{
 	text-shadow:1px 1px 0 #000;
 }
+.blog-details-content p{
+	text-align: justify
+}
 .media .media-body .button{
 	float:none;
 	text-align: center;
@@ -250,15 +284,24 @@ footer .footer-bottom p a:hover, footer .footer-bottom p a:focus{
 	text-decoration: none;
 }
 
+.popular-post-widget .media-object{
+	width:100%;
+	max-width:100px;
+	height:auto;
+}
+
 @media (min-width: 1199px) {
 
   .navbar-toggle {
 	display: none;
   }
-  .main-nav li a {
+  .main-nav li a, .main-nav li button {
 	text-shadow: 1px 1px 0 #ffffff;
 	font-size: 12px;
 	padding:39px 10px !important;
+	text-transform: uppercase;
+	background: transparent;
+	border: none;
   }
   .navbar-collapse {
     width: auto;
@@ -310,7 +353,7 @@ footer .footer-bottom p a:hover, footer .footer-bottom p a:focus{
 	  float: left;
 	  width: 100%;
 	}
-	.main-nav li a {
+	.main-nav li a, .main-nav li button {
 		padding:10px !important;
 		text-shadow:none;
 	}
@@ -318,12 +361,13 @@ footer .footer-bottom p a:hover, footer .footer-bottom p a:focus{
 		float:none;
 	}
 
-	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, 
+	.navbar-default .navbar-nav > .active > button, .navbar-default .navbar-nav > .active > button:hover, .navbar-default .navbar-nav > .active > button:focus {
 		color: white;
 		background: #24346c;
 	}
 
-	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > button:hover, .navbar-default .navbar-nav > li > button:focus {
 		color:white;
 		background-color:#0c77b6;
 	}

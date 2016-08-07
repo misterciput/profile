@@ -6,6 +6,7 @@ class Artikel extends CI_Controller {
 	function __construct() {
        parent::__construct();
        $this->load->model('md_artikel', 'artikel');
+       $this->load->model('md_event', 'event');
    }
 
 	public function index(){

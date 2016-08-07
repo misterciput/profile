@@ -67,10 +67,34 @@ class Md_event extends CI_Model {
  	public function get_upcoming_event(){
 		$this->db->from('event');
 		$this->db->where('active', 1);
-		$this->db->order_by('id','desc');
+		$this->db->order_by('date','desc');
 		$this->db->limit(4);
 		$result = $this->db->get();
 
 		return $result->result(); 
+	}
+
+	public function get_next_event(){
+		$this->db->from('event');
+		$this->db->where('active', 1);
+		$this->db->order_by('date','desc');
+		$this->db->limit(3);
+		$result = $this->db->get();
+
+		return $result->result(); 
+	}
+
+	public function get_all_events($num, $offset){
+		$this->db->where('active', 1);
+		$this->db->order_by('date','desc');
+		$this->db->limit($num, $offset);
+		$result = $this->db->get('event');
+
+		return $result->result(); 
+	}
+
+	public function count_all_events(){
+		$this->db->where('active', 1);
+		return $this->db->count_all('event');
 	}
 }

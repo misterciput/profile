@@ -150,7 +150,7 @@
 
           <!-- LOGO -->
 
-           <a class="navbar-brand logo" href="index.html"><img src="<?=base_url()?>assets/images/logo1.png" alt="logo"></a>                      
+           <a class="navbar-brand logo" href="<?=base_url()?>Front_home"><img src="<?=base_url()?>assets/images/logo1.png" alt="logo"></a>                      
 
         </div>
 
@@ -158,7 +158,7 @@
 
           <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
 
-            <li><a href="index.html">Home</a></li>                   
+            <li><button href="" onclick="location.href='<?=base_url()?>Front_home';">Home</button></li>            
 
           </ul>                            
 
@@ -204,7 +204,7 @@
 
               <ol class="breadcrumb">
 
-                <li><a href="index.html">Home</a></li>                
+                <li><a href="<?=base_url()?>Front_home">Home</a></li>                
 
                 <li class="active">News All</li>
 
@@ -250,19 +250,19 @@
 
                     <figure>
 
-                      <a href="blog-single.html"><img alt="img" src="<?=base_url()?>assets/img/<?=$row->img?>"></a>
+                      <img alt="img" src="<?=base_url()?>assets/img/<?=$row->img?>">
 
                     </figure>
 
                     <div class="blog-title">
 
-                      <h2><a href="blog-single.html"><?=$row->judul?></a></h2>
+                      <h2><a href="<?=base_url()?>Front_home/get_news_detail/<?=$row->id?>"><?=$row->judul?></a></h2>
 
                       <p>Posted by <a href="#" class="blog-admin">admin</a> on <span class="blog-date"><?=date('d F Y', strtotime($row->tanggal))?></span></p>
 
                     </div>
 
-                    <?=$row->isi?>
+                    <?=substr($row->isi, 0, 300)?> ... <a href="<?=base_url()?>Front_home/get_news_detail/<?=$row->id?>"><span>Read More</span></a>
 
                     <div class="blog-footer">
 

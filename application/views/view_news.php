@@ -164,9 +164,9 @@
 
           <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
 
-            <li><a href="">Home</a></li>                   
-
-            <li><a href="">VIEW ALL NEWS </a></li>
+            <li><button href="" onclick="location.href='<?=base_url()?>Front_home';">Home</button></li> 
+                         
+            <li class=""><button href="" onclick="location.href='<?=base_url()?>front_home/view_all_news';">VIEW ALL NEWS </button></li>
 
           </ul>                            
 
@@ -208,7 +208,7 @@
 
             <div class="blog-banner-area">
 
-              <h2>News</h2>
+              <h2>NEWS</h2>
 
               <ol class="breadcrumb">
 
@@ -354,7 +354,7 @@
 
                     <div class="popular-post-widget">
                     <?php foreach($upcoming as $key => $news){
-                      if($id != $news->id){
+                     if($id != $news->id){
                     ?>
                       <div class="media">
 
@@ -411,15 +411,21 @@
 
                       
 
+
+                    <?php foreach($nextevent as $key => $event){if($id != $event->id){
+                      ?>
+
+                    
+
                       <div class="single-instagram-feed">
 
-                        <a href="#">
+                        <a href="<?=base_url()?>Front_home/get_event_detail/<?=$event->id?>">
 
-                          <img src="<?=base_url()?>assets/images/instagram-feed-img.jpg" alt="img">
+                          <img src="<?=base_url()?>assets/img/<?=$event->pict?>" alt="img">
 
                           <div class="event-caption">
 
-                            <p>Sosialisasi Tandatangan Digital</p>
+                            <p weight="50%" height="25%"><?=$event->title?></p>
 
                           </div>
 
@@ -428,44 +434,9 @@
                       </div>
 
                     
-
-                    
-
-                      <div class="single-instagram-feed">
-
-                        <a href="#">
-
-                          <img src="<?=base_url()?>assets/images/instagram-feed-img.jpg" alt="img">
-
-                          <div class="event-caption">
-
-                            <p>Sosialisasi Tandatangan Digital</p>
-
-                          </div>
-
-                        </a>
-
-                      </div>
-
-                    
-
-                    
-
-                      <div class="single-instagram-feed">
-
-                        <a href="#">
-
-                          <img src="<?=base_url()?>assets/images/instagram-feed-img.jpg" alt="img">
-
-                          <div class="event-caption">
-
-                            <p>Sosialisasi Tandatangan Digital</p>
-
-                          </div>
-
-                        </a>  
-
-                      </div>
+                    <?php } 
+                      }
+                    ?>
 
                       
 
