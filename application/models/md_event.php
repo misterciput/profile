@@ -84,6 +84,16 @@ class Md_event extends CI_Model {
 		return $result->result(); 
 	}
 
+	public function get_next_event_all(){
+		$this->db->from('event');
+		$this->db->where('active', 1);
+		$this->db->order_by('date','desc');
+		$this->db->limit(3);
+		$result = $this->db->get();
+
+		return $result->result(); 
+	}
+
 	public function get_all_events($num, $offset){
 		$this->db->where('active', 1);
 		$this->db->order_by('date','desc');

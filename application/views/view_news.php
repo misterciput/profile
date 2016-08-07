@@ -425,7 +425,7 @@
 
                           <div class="event-caption">
 
-                            <p weight="50%" height="25%"><?=$event->title?></p>
+                            <p><?=$event->title?></p>
 
                           </div>
 
