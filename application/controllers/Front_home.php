@@ -16,6 +16,7 @@ class Front_home extends CI_Controller {
 		$data['headline_news'] = $this->artikel->get_news_headline();
 		$data['upcoming_event'] = $this->event->get_upcoming_event();
 		$data['all_event'] = $this->event->get_all_active_event();
+		$data['get_video'] = $this->event->get_video_active();
 		$this->load->view('view_front_home', $data);
 	}
 

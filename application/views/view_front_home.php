@@ -283,13 +283,20 @@
     <img src="assets/images/spanduk-bg1.jpg" alt="img">
     <div class="call-to-overlay">
       <div class="container">
+
+        <?php foreach($get_video as $key => $gv){
+        ?>
         <div class="call-to-content wow fadeInUp">
           <h2>eSignature Video</h2>
           <img alt="iphone" src="assets/images/iphone.png" class="img-responsive pos-center">
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/R-1MT2lf9hQ" frameborder="0" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item" src="<?=$gv->link?>" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
+
+        <?php } 
+        ?>
+
       </div>
     </div> 
   </section>
@@ -603,7 +610,7 @@
             <div class="title-area">
               <h2 class="tittle">Request eSignature</h2>
             </div>
-            <form action="" class="contact-form">
+            <form action="" class="contact-form" action="<?=base_url()?>video/do_insert" method="post" enctype="multipart/form-data">
               <div class="form-group">  
                 <label class="col-sm-3 control-label" for="nama">Nama</label> 
                 <div class="col-sm-8">             

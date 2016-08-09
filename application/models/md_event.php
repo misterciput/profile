@@ -48,6 +48,15 @@ class Md_event extends CI_Model {
 	public function get_all_active_event(){
 		$this->db->from('event');
 		$this->db->where('active', 1);
+		$this->db->limit(1);
+		$result = $this->db->get();
+
+		return $result->result();	
+	}
+
+	public function get_video_active(){
+		$this->db->from('video');
+		$this->db->where('publish', 1);
 		$this->db->order_by('id','asc');
 		$result = $this->db->get();
 

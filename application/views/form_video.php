@@ -10,16 +10,14 @@
       <input placeholder="Deskripsi" id="deskripsi" type="text" class="validate" name="deskripsi">
       <label for="deskripsi">Deskripsi</label>
     </div>
-  </div><br/>
-  <div class="file-field input-field">
-      <div class="btn">
-        <span>UPLOAD VIDEO</span>
-        <input type="file" name="videos" multiple >
-      </div>
-      <div class="file-path-wrapper">
-        <input class="file-path validate" type="text" placeholder="Upload one or more files">
-      </div>
   </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input placeholder="URL" id="link" type="text" class="validate" name="link">
+      <label for="deskripsi">URL</label>
+    </div>
+  </div>
+  <br/>
   <div class="row">
     <p>
       <input type="checkbox" id="publish" name="publish" />
