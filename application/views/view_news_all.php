@@ -369,15 +369,22 @@
 
                       
 
+                    
+
+                      <?php foreach($nextevent as $key => $event){if($id != $event->id){
+                      ?>
+
+                    
+
                       <div class="single-instagram-feed">
 
-                        <a href="#">
+                        <a href="<?=base_url()?>Front_home/get_event_detail/<?=$event->id?>">
 
-                          <img src="<?=base_url()?>assets/images/instagram-feed-img.jpg" alt="img">
+                          <img src="<?=base_url()?>assets/img/<?=$event->pict?>" alt="img">
 
                           <div class="event-caption">
 
-                            <p>Sosialisasi Tandatangan Digital</p>
+                            <p><?=$event->title?></p>
 
                           </div>
 
@@ -386,44 +393,12 @@
                       </div>
 
                     
+                    <?php } 
+                      }
+                    ?>
 
                     
 
-                      <div class="single-instagram-feed">
-
-                        <a href="#">
-
-                          <img src="<?=base_url()?>assets/images/instagram-feed-img.jpg" alt="img">
-
-                          <div class="event-caption">
-
-                            <p>Sosialisasi Tandatangan Digital</p>
-
-                          </div>
-
-                        </a>
-
-                      </div>
-
-                    
-
-                    
-
-                      <div class="single-instagram-feed">
-
-                        <a href="#">
-
-                          <img src="<?=base_url()?>assets/images/instagram-feed-img.jpg" alt="img">
-
-                          <div class="event-caption">
-
-                            <p>Sosialisasi Tandatangan Digital</p>
-
-                          </div>
-
-                        </a>  
-
-                      </div>
 
                       
 

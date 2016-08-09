@@ -20,7 +20,9 @@ class Front_home extends CI_Controller {
 	}
 
 	public function get_news_detail($id){
-		$result = $this->artikel->get_news_detail($id)[0];
+		/*$result = $this->artikel->get_news_detail($id)[0];*/
+		$result = $this->artikel->get_news_detail($id);
+		foreach($result as $result) break;
 		$upcoming = $this->artikel->get_upcoming_news();
 		$nextevent = $this->event->get_next_event();
 		$data = array();
@@ -35,7 +37,9 @@ class Front_home extends CI_Controller {
 	}
 
 	public function get_event_detail($id){
- 		$result = $this->event->get_event_detail($id)[0];
+ 		/*$result = $this->event->get_event_detail($id)[0];*/
+ 		$result = $this->event->get_event_detail($id);
+		foreach($result as $result) break;
  		$upcoming = $this->event->get_upcoming_event();
  		$nextnews = $this->artikel->get_next_news();
  		$data = array();
@@ -78,6 +82,7 @@ class Front_home extends CI_Controller {
  		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
  		$data['data'] = $this->artikel->get_all_news($per_page, $page);
  		$data['paging'] = $this->pagination->create_links();
+
 
  		$this->load->view('view_news_all', $data);
  	}
