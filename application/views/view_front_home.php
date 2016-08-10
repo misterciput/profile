@@ -610,35 +610,35 @@
             <div class="title-area">
               <h2 class="tittle">Request eSignature</h2>
             </div>
-            <form action="" class="contact-form" action="<?=base_url()?>video/do_insert" method="post" enctype="multipart/form-data">
+            <form class="contact-form" action="<?=base_url()?>request/do_insert" method="post" enctype="multipart/form-data">
               <div class="form-group">  
                 <label class="col-sm-3 control-label" for="nama">Nama</label> 
                 <div class="col-sm-8">             
-                  <input type="text" class="form-control" placeholder="Nama ..." required="">
+                  <input type="text" id="nama" name="nama" class="form-control" placeholder="Nama ..." required="">
                 </div>
               </div>
               <div class="form-group">  
                 <label class="col-sm-3 control-label" for="nik">NIK</label>  
                 <div class="col-sm-8">               
-                  <input type="number" class="form-control" onkeypress="return isNumberKey(event)" placeholder="291003 ..." required="">
+                  <input type="number" id="nik" name="nik" class="form-control" onkeypress="return isNumberKey(event)" placeholder="291003 ..." required="">
                 </div>
               </div>  
               <div class="form-group">   
                 <label class="col-sm-3 control-label" for="phone">Nomor Telepon</label>  
                 <div class="col-sm-8">               
-                  <input type="number" class="form-control" onkeypress="return isNumberKey(event)" placeholder="0811 ..." required="">
+                  <input type="number" id="phone" name="phone" class="form-control" onkeypress="return isNumberKey(event)" placeholder="0811 ..." required="">
                 </div>
               </div>  
               <div class="form-group">  
                 <label class="col-sm-3 control-label" for="email">Email</label> 
                 <div class="col-sm-8">                   
-                  <input type="email" class="form-control" placeholder="user@email.co ..." required="">
+                  <input type="email" id="email" name="email" class="form-control" placeholder="user@email.co ..." required="">
                 </div>
               </div>              
               <div class="form-group">
                 <label class="col-sm-3 control-label" for="phone1">Alamat</label>
                 <div class="col-sm-8">   
-                  <textarea class="form-control" type="text" rows="3" placeholder="Jl. Raya..." required=""></textarea>
+                  <textarea class="form-control" type="text" id="alamat" name="alamat" rows="3" placeholder="Jl. Raya..." required=""></textarea>
                 </div>
               </div>
               <button type="submit" data-text="SUBMIT" class="button button-default"><span>SUBMIT</span></button>

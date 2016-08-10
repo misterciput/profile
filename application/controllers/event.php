@@ -66,7 +66,7 @@ class Event extends CI_Controller {
 
 				$this->upload->do_upload('pict');
 				$upload = $this->upload->data();
-				$event = array(
+				$data = array(
 					'title' => $this->input->post('title'),
 					'date' => date('Y-m-d', strtotime($this->input->post('date'))),
 					'description' => $this->input->post('description'),
@@ -75,7 +75,7 @@ class Event extends CI_Controller {
 					'timestamp' => date('Y-m-d h:i:s')
 				);
 
-				$this->event->insert_event($event);
+				$this->event->insert_event($data);
 				$data['event'] = $this->event->get_all_event();
 				$data['message'] = 'Event baru telah ditambahkan';
 				$this->index($data);
@@ -101,7 +101,7 @@ class Event extends CI_Controller {
 				$this->upload->do_upload('pict');
 				$upload = $this->upload->data();
 				$current_event = $this->event->get_event_by_id($id);
-				$event = array(
+				$data = array(
 					'title' => $this->input->post('title'),
 					'date' => date('Y-m-d', strtotime($this->input->post('date'))),
 					'description' => $this->input->post('description'),
@@ -109,9 +109,10 @@ class Event extends CI_Controller {
 					'pict' => $upload['file_name']
 				);
 				
-				$this->event->update_event($id, $event);
+				$this->event->update_event($id, $data);
 				$data['message'] = 'Event telah diubah';
-				$this->edit($id, $data);
+				/*$this->edit($id, $data);*/
+				$this->index($data);
 				
 
 			}else{

@@ -55,24 +55,22 @@ class Request extends CI_Controller {
 		$data = array();
 		$data['message'] = null;
 		$data['url']=null;
-		if($this->session->userdata('status')){
 			
-			$event = array(
-				'title' => $this->input->post('title'),
-				'date' => date('Y-m-d', strtotime($this->input->post('date'))),
-				'description' => $this->input->post('description'),
-				'active' => $this->input->post('active') ? 1 : 0,
-				
-				'timestamp' => date('Y-m-d h:i:s')
+			$data = array(
+				'nama' => $this->input->post('nama'),
+				'nik' => $this->input->post('nik'),
+				'phone' => $this->input->post('phone'),
+				'email' => $this->input->post('email'),
+				'alamat' => $this->input->post('alamat'),
+				'recdate' => date('Y-m-d h:i:s')
 			);
 
-			$this->event->insert_event($event);
-			$data['event'] = $this->event->get_all_event();
-			$data['message'] = 'Event baru telah ditambahkan';
-			$this->index($data);
-		}else{
-			$this->load->view('view_login', $data);
-		}
+			$this->request->insert_request($data);
+
+			//$data['request'] = $this->request->get_all_event();
+			//$data['message'] = 'Event baru telah ditambahkan';
+			$this->load->view('view_front_home', $data);
+		
 	}
 
 	public function do_edit($id){
@@ -87,16 +85,16 @@ class Request extends CI_Controller {
 			$this->upload->do_upload('pict');
 			$upload = $this->upload->data();
 			$current_event = $this->event->get_event_by_id($id);
-			$event = array(
+			$data = array(
 				'title' => $this->input->post('title'),
 				'date' => date('Y-m-d', strtotime($this->input->post('date'))),
 				'description' => $this->input->post('description'),
 				'active' => $this->input->post('active') ? 1 : 0,
 				'pict' => $upload['file_name']
 			);
-			$this->event->update_event($id, $event);
-			$data['message'] = 'Event telah diubah';
-			$this->edit($id, $data);
+			$this->event->update_event($id, $data);
+			//$data['message'] = 'Event telah diubah';
+			$this->index($data);
 		}else{
 			$this->load->view('view_login', $data);
 		}
