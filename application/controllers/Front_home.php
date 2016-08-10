@@ -8,6 +8,7 @@ class Front_home extends CI_Controller {
        $this->load->model('md_user', 'user');
        $this->load->model('md_artikel', 'artikel');
        $this->load->model('md_event', 'event');
+       $this->load->model('md_request', 'request');
    }
 
 	public function index()
@@ -120,4 +121,28 @@ class Front_home extends CI_Controller {
 
  		$this->load->view('view_events_all', $data);
  	}
+
+ 	public function do_insert(){
+		$data = array();
+		$data['message'] = null;
+		$data['url']=null;
+		if($this->session->userdata('status')){
+			
+			$event = array(
+				'title' => $this->input->post('title'),
+				'date' => date('Y-m-d', strtotime($this->input->post('date'))),
+				'description' => $this->input->post('description'),
+				'active' => $this->input->post('active') ? 1 : 0,
+				
+				'timestamp' => date('Y-m-d h:i:s')
+			);
+
+			$this->event->insert_event($event);
+			$data['event'] = $this->event->get_all_event();
+			$data['message'] = 'Event baru telah ditambahkan';
+			$this->index($data);
+		}else{
+			$this->load->view('view_login', $data);
+		}
+	}
 }

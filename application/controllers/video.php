@@ -47,7 +47,7 @@ class Video extends CI_Controller {
 			$data['deskripsi'] = $result->deskripsi;
 			$data['link'] = $result->link;
 			$data['publish'] = $result->publish;
-			/*$data['videos'] = $result->videos;*/
+
 
 			$data['title'] = 'Edit video';
 			$data['view'] = 'edit_video';
@@ -62,6 +62,9 @@ class Video extends CI_Controller {
 			$data['message'] = null;
 			$data['url']=null;
 			if($this->session->userdata('status')){
+				$set = array(
+                    'publish' => 0
+                );
 				$data = array(
 					'judul' => $this->input->post('judul'),
 					'deskripsi' => $this->input->post('deskripsi'),
@@ -69,6 +72,12 @@ class Video extends CI_Controller {
 					'publish' => $this->input->post('publish') ? 1 : 0,
 					'timestamp' => date('Y-m-d h:i:s')
 				);
+
+				$publish = $data['publish'];
+				if($publish = 1){
+				    $this->db->update('video', $set, array('publish' => 1));
+				    /*$this->db->update(TABLE, NEW_DATA, CRITERIA);*/  
+				}
 
 				$this->video->insert_video($data);
 				$data['video'] = $this->video->get_all_video();
@@ -87,10 +96,13 @@ class Video extends CI_Controller {
 			$data['url']=null;
 			if($this->session->userdata('status')){
 
-				$this->load->library('upload', $config);
-				/*$this->upload->do_upload('videos');*/
+				/*$this->load->library('upload', $config);
+				
 				$upload = $this->upload->data();
-				$current_video = $this->video->get_video_by_id($id);
+				$current_video = $this->video->get_video_by_id($id);*/
+				$set = array(
+                    'publish' => 0
+                );
 				$data = array(
 					'judul' => $this->input->post('judul'),
 					'deskripsi' => $this->input->post('deskripsi'),
@@ -98,6 +110,14 @@ class Video extends CI_Controller {
 					'publish' => $this->input->post('publish') ? 1 : 0,
 					'timestamp' => date('Y-m-d h:i:s')
 				);
+
+				$publish = $data['publish'];
+				if($publish = 1){
+					$this->db->where('id', $id);
+				    $this->db->update('video', $set, array('publish' => 1));
+				    /*$this->db->update(TABLE, NEW_DATA, CRITERIA);*/  
+				}
+
 				$this->video->update_video($id, $data);
 				$data['message'] = 'video telah diubah';
 				$data['video'] = $this->video->get_all_video();

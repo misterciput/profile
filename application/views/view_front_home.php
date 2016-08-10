@@ -290,7 +290,7 @@
           <h2>eSignature Video</h2>
           <img alt="iphone" src="assets/images/iphone.png" class="img-responsive pos-center">
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="<?=$gv->link?>" frameborder="0" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/<?=$gv->link?>" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
 
