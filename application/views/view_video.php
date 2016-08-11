@@ -4,6 +4,7 @@
 					<th width="20%">No</th>
 					<th width="20%">Judul</th>
 					<th >Tanggal</th>
+					<th>Publish<th>
 					<th>Action</th>
 				</tr>
 			</thead>
@@ -16,6 +17,7 @@
 					<td><?=$no?></td>
 					<td><?=$row->judul?></td>
 					<td><?=date("d F Y H:i:s", strtotime($row->timestamp))?></td>
+					<td><?=$row->publish == 1 ? 'Yes' : 'No'?><td>
 					<td>
 						<a class="waves-effect waves-light btn orange" href="<?=base_url()?>video/edit/<?=$row->id?>" type="submit">Edit</a>
 						<a class="waves-effect waves-light btn red" href="<?=base_url()?>video/delete/<?=$row->id?>" type="submit">Delete</a>

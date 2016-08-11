@@ -92,23 +92,22 @@ class Event extends CI_Controller {
 				$config['max_height']  = '0';
 				$config['encrypt_name'] = TRUE;
 
-				if (isset($_FILES['pict']['file_name']) && !empty($_FILES['pict']['file_name'])) {
-				    // do_upload
-
-				}
-
 				$this->load->library('upload', $config);
 				$this->upload->do_upload('pict');
 				$upload = $this->upload->data();
 				$current_event = $this->event->get_event_by_id($id);
+
 				$data = array(
 					'title' => $this->input->post('title'),
 					'date' => date('Y-m-d', strtotime($this->input->post('date'))),
 					'description' => $this->input->post('description'),
 					'active' => $this->input->post('active') ? 1 : 0,
-					'pict' => $upload['file_name']
 				);
 				
+				if($upload['file_name']){
+					$data['pict'] = $upload['file_name'];
+				}
+
 				$this->event->update_event($id, $data);
 				$data['message'] = 'Event telah diubah';
 				/*$this->edit($id, $data);*/

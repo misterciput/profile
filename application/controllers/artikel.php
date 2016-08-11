@@ -107,20 +107,25 @@ class Artikel extends CI_Controller {
 				$config['max_height']  = '0';
 				$config['encrypt_name'] = TRUE;
 
+
 				$this->load->library('upload', $config);
 				$this->upload->do_upload('img');
 				$upload = $this->upload->data();
 				$current_artikel = $this->artikel->get_artikel_by_id($id);
+
 				$data = array(
 					'judul' => $this->input->post('judul'),
 					'kategori' => $this->input->post('kategori'),
 					'isi' => $this->input->post('isi'),
 					'headline' => $this->input->post('headline') ? 1 : 0,
 					'show' => $this->input->post('show') ? 1 : 0,
-					'img' => $upload['file_name'],
 					'tanggal' => date('Y-m-d', strtotime($this->input->post('tanggal'))),
 					'recdate' => date('Y-m-d h:i:s')
 				);
+				
+				if($upload['file_name']){
+					$data['img'] = $upload['file_name'];
+				}
 				$this->artikel->update_artikel($id, $data);
 				$data['message'] = 'Artikel telah diubah';
 				$data['artikel'] = $this->artikel->get_all_artikel();

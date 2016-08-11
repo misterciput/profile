@@ -15,7 +15,7 @@
   </div>
   <div class="row">
     <div class="input-field col s12">
-      <input placeholder="URL" id="link" type="text" class="validate" name="link" value="<?=isset($link) ? $link : ''?>">
+      <input placeholder="URL" id="link" type="text" class="validate" name="link" value="<?=isset($link) ? 'https://www.youtube.com/watch?v='.$link : ''?>">
       <label for="deskripsi">URL</label>
     </div>
   </div>

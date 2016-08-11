@@ -80,6 +80,7 @@ class Front_home extends CI_Controller {
 		$config['num_tag_open'] = '<li>';
 		$config['num_tag_close'] = '</li>';
 
+		$data['nextevent'] = $this->event->get_next_event();
  		$this->pagination->initialize($config);
  		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
  		$data['data'] = $this->artikel->get_all_news($per_page, $page);
@@ -114,6 +115,7 @@ class Front_home extends CI_Controller {
 		$config['num_tag_open'] = '<li>';
 		$config['num_tag_close'] = '</li>';
 
+ 		$data['nextnews'] = $this->artikel->get_next_news();
  		$this->pagination->initialize($config);
  		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
  		$data['data'] = $this->event->get_all_events($per_page, $page);
@@ -122,28 +124,4 @@ class Front_home extends CI_Controller {
  		$this->load->view('view_events_all', $data);
  	}
 
- 	public function do_insert(){
-		$data = array();
-		$data['message'] = null;
-		$data['url']=null;
-		if($this->session->userdata('status')){
-			
-			$data = array(
-				'nama' => $this->input->post('nama'),
-				'nik' => $this->input->post('nik'),
-				'phone' => $this->input->post('phone'),
-				'email' => $this->input->post('email'),
-				'alamat' => $this->input->post('alamat'),
-				'recdate' => date('Y-m-d h:i:s')
-			);
-
-			$this->request->insert_request($data);
-			//$data['request'] = $this->request->get_all_event();
-			//$data['message'] = 'Event baru telah ditambahkan';
-			//$this->index($data);
-			$this->load->view('view_front_home');
-		}else{
-			$this->load->view('view_login', $data);
-		}
-	}
 }

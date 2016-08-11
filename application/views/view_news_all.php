@@ -371,7 +371,7 @@
 
                     
 
-                      <?php foreach($nextevent as $key => $event){if($id != $event->id){
+                      <?php foreach($nextevent as $key => $event){
                       ?>
 
                     
@@ -393,7 +393,7 @@
                       </div>
 
                     
-                    <?php } 
+                    <?php  
                       }
                     ?>
 

@@ -411,10 +411,9 @@
 
                     
 
-                    <?php foreach($nextnews as $key => $news){if($id != $news->id){
+                    <?php foreach($nextnews as $key => $news){
                       ?>
 
-                    
 
                       <div class="single-instagram-feed">
 
@@ -433,7 +432,7 @@
                       </div>
 
                     
-                      <?php } 
+                      <?php 
                       }
                     ?>
                       

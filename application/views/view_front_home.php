@@ -458,7 +458,7 @@
                 <!-- portfolio menu -->
                <div class="portfolio-menu">
                  <ul>
-                   <li class="filter" data-filter=".upcoming">Upcoming</li>
+                   <li class="filter" data-filter="upcoming">Upcoming</li>
                    <li class="filter" data-filter="all">All</li>
                  </ul>
                </div>

@@ -65,16 +65,18 @@ class Video extends CI_Controller {
 				$set = array(
                     'publish' => 0
                 );
+
+				$link = explode('v=', $this->input->post('link'));
 				$data = array(
 					'judul' => $this->input->post('judul'),
 					'deskripsi' => $this->input->post('deskripsi'),
-					'link' => $this->input->post('link'),
+					'link' => $link[1],
 					'publish' => $this->input->post('publish') ? 1 : 0,
 					'timestamp' => date('Y-m-d h:i:s')
 				);
 
 				$publish = $data['publish'];
-				if($publish = 1){
+				if($publish == 1){
 				    $this->db->update('video', $set, array('publish' => 1));
 				    /*$this->db->update(TABLE, NEW_DATA, CRITERIA);*/  
 				}
@@ -101,20 +103,27 @@ class Video extends CI_Controller {
 				$upload = $this->upload->data();
 				$current_video = $this->video->get_video_by_id($id);*/
 				$set = array(
-                    'publish' => 0
+                    'publish' => 1
                 );
+
+                $link = explode('v=', $this->input->post('link'));
+
 				$data = array(
 					'judul' => $this->input->post('judul'),
 					'deskripsi' => $this->input->post('deskripsi'),
-					'link' => $this->input->post('link'),
+					'link' => $link[1],
 					'publish' => $this->input->post('publish') ? 1 : 0,
 					'timestamp' => date('Y-m-d h:i:s')
 				);
 
 				$publish = $data['publish'];
-				if($publish = 1){
+
+				if($publish == 1){
 					$this->db->where('id', $id);
-				    $this->db->update('video', $set, array('publish' => 1));
+				    $this->db->update('video', $set);
+					$this->db->where('id <>', $id);
+					$this->db->update('video', array('publish' => 0));
+					
 				    /*$this->db->update(TABLE, NEW_DATA, CRITERIA);*/  
 				}
 
@@ -123,7 +132,7 @@ class Video extends CI_Controller {
 				$data['video'] = $this->video->get_all_video();
 				$data['title'] = 'video';
 				/*$data['view'] = 'view_video';*/
-				$this->load->view('template', $data);
+				$this->index();
 			}else{
 				$this->load->view('view_login', $data);
 			}

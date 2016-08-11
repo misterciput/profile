@@ -379,15 +379,24 @@
 
                       
 
+
+                    
+
+                    
+
+                      <?php foreach($nextnews as $key => $news){
+                      ?>
+
+
                       <div class="single-instagram-feed">
 
-                        <a href="#">
+                        <a href="<?=base_url()?>Front_home/get_news_detail/<?=$news->id?>">
 
-                          <img src="<?=base_url()?>assets/images/instagram-feed-img.jpg" alt="img">
+                          <img src="<?=base_url()?>assets/img/<?=$news->img?>" alt="img">
 
                           <div class="event-caption">
 
-                            <p>Sosialisasi Tandatangan Digital</p>
+                            <p><?=$news->judul?></p>
 
                           </div>
 
@@ -396,44 +405,14 @@
                       </div>
 
                     
-
-                    
-
-                      <div class="single-instagram-feed">
-
-                        <a href="#">
-
-                          <img src="<?=base_url()?>assets/images/instagram-feed-img.jpg" alt="img">
-
-                          <div class="event-caption">
-
-                            <p>Sosialisasi Tandatangan Digital</p>
-
-                          </div>
-
-                        </a>
-
-                      </div>
+                      <?php 
+                      }
+                    ?>
 
                     
 
                     
 
-                      <div class="single-instagram-feed">
-
-                        <a href="#">
-
-                          <img src="<?=base_url()?>assets/images/instagram-feed-img.jpg" alt="img">
-
-                          <div class="event-caption">
-
-                            <p>Sosialisasi Tandatangan Digital</p>
-
-                          </div>
-
-                        </a>  
-
-                      </div>
 
                       
 
