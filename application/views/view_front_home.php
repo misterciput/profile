@@ -90,7 +90,7 @@
 
     <div class="header-social">
     <?php foreach($social_media as $soc){?>
-        <a class="facebook" href="<?=rawurldecode($soc->link)?>" target="_blank"><span class="fa <?=$soc->icon?>" ></span></a>
+        <a class="<?=$soc->icon?>" href="<?=rawurldecode($soc->link)?>" target="_blank"><span class="fa fa-<?=$soc->icon?>" ></span></a>
     <?php } ?>
         <!-- <a class="dribbble" href="#"><span class="fa fa-dribbble"></span></a> -->
     </div> 
