@@ -9,6 +9,7 @@ class Front_home extends CI_Controller {
        $this->load->model('md_artikel', 'artikel');
        $this->load->model('md_event', 'event');
        $this->load->model('md_request', 'request');
+       $this->load->model('md_social_media', 'social_media');
    }
 
 	public function index()
@@ -18,6 +19,7 @@ class Front_home extends CI_Controller {
 		$data['upcoming_event'] = $this->event->get_upcoming_event();
 		$data['all_event'] = $this->event->get_all_active_event();
 		$data['get_video'] = $this->event->get_video_active();
+		$data['social_media'] = $this->social_media->get_all_social_media();
 		$this->load->view('view_front_home', $data);
 	}
 

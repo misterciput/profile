@@ -89,12 +89,9 @@
     </div>
 
     <div class="header-social">
-    Find Us On: &nbsp;
-        <a class="facebook" href="#"><span class="fa fa-facebook"></span></a>
-        <a class="twitter" href="#"><span class="fa fa-twitter"></span></a>
-        <a class="google-plus" href="#"><span class="fa fa-google-plus"></span></a>
-        <a class="youtube" href="#"><span class="fa fa-youtube"></span></a>
-        <a class="linkedin" href="#"><span class="fa fa-linkedin"></span></a>
+    <?php foreach($social_media as $soc){?>
+        <a class="facebook" href="<?=rawurldecode($soc->link)?>" target="_blank"><span class="fa <?=$soc->icon?>" ></span></a>
+    <?php } ?>
         <!-- <a class="dribbble" href="#"><span class="fa fa-dribbble"></span></a> -->
     </div> 
 
@@ -664,12 +661,9 @@
             <div class="footer-top-area">             
                 <a class="footer-logo" href="#"><img src="assets/images/logo.png" alt="Logo"></a>              
               <div class="footer-social">
-                <a class="facebook" href="#"><span class="fa fa-facebook"></span></a>
-                <a class="twitter" href="#"><span class="fa fa-twitter"></span></a>
-                <a class="google-plus" href="#"><span class="fa fa-google-plus"></span></a>
-                <a class="youtube" href="#"><span class="fa fa-youtube"></span></a>
-                <a class="linkedin" href="#"><span class="fa fa-linkedin"></span></a>
-                <!-- <a class="dribbble" href="#"><span class="fa fa-dribbble"></span></a> -->
+                <?php foreach($social_media as $soc){?>
+                  <a class="facebook" href="<?=rawurldecode($soc->link)?>" target="_blank"><span class="fa <?=$soc->icon?>" ></span></a>
+              <?php } ?>
               </div>
             </div>
           </div>
