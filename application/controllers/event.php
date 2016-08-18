@@ -86,7 +86,7 @@ class Event extends CI_Controller {
 
 		public function do_edit($id){
 			if($this->session->userdata('status')){
-				$config['upload_path'] = './assets/img/';
+				$config['upload_path'] = $_SERVER['DOCUMENT_ROOT'].'/assets/img/';
 				$config['allowed_types'] = 'gif|jpg|png|jpeg';
 				$config['max_width']  = '0';
 				$config['max_height']  = '0';
@@ -96,7 +96,7 @@ class Event extends CI_Controller {
 				$this->upload->do_upload('pict');
 				$upload = $this->upload->data();
 				$current_event = $this->event->get_event_by_id($id);
-
+				
 				$data = array(
 					'title' => $this->input->post('title'),
 					'date' => date('Y-m-d', strtotime($this->input->post('date'))),
