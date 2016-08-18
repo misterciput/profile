@@ -328,17 +328,9 @@
 
                     <div class="follow-us">
 
-                      <a class="facebook" href="#"><span class="fa fa-facebook"></span></a>
-
-                      <a class="twitter" href="#"><span class="fa fa-twitter"></span></a>
-
-                      <a class="google-plus" href="#"><span class="fa fa-google-plus"></span></a>
-
-                      <a class="youtube" href="#"><span class="fa fa-youtube"></span></a>
-
-                      <a class="linkedin" href="#"><span class="fa fa-linkedin"></span></a>
-
-                      
+                      <?php foreach($social_media as $soc){?>
+                          <a class="<?=$soc->icon?>" href="<?=rawurldecode($soc->link)?>" target="_blank"><span class="fa fa-<?=$soc->icon?>" ></span></a>
+                      <?php } ?>
 
                     </div>
 

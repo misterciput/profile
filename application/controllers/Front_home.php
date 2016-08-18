@@ -37,6 +37,7 @@ class Front_home extends CI_Controller {
 		$data['img'] = $result->img;
 		$data['upcoming'] = $upcoming;
 		$data['nextevent'] = $nextevent;
+		$data['social_media'] = $this->social_media->get_all_social_media();
 		$this->load->view('view_news', $data);
 	}
 
@@ -54,6 +55,7 @@ class Front_home extends CI_Controller {
  		$data['pict'] = $result->pict;
  		$data['upcoming'] = $upcoming;
  		$data['nextnews'] = $nextnews;
+ 		$data['social_media'] = $this->social_media->get_all_social_media();
  		$this->load->view('view_events', $data);
  	}
 
@@ -83,6 +85,7 @@ class Front_home extends CI_Controller {
 		$config['num_tag_close'] = '</li>';
 
 		$data['nextevent'] = $this->event->get_next_event();
+		$data['social_media'] = $this->social_media->get_all_social_media();
  		$this->pagination->initialize($config);
  		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
  		$data['data'] = $this->artikel->get_all_news($per_page, $page);
@@ -118,6 +121,7 @@ class Front_home extends CI_Controller {
 		$config['num_tag_close'] = '</li>';
 
  		$data['nextnews'] = $this->artikel->get_next_news();
+ 		$data['social_media'] = $this->social_media->get_all_social_media();
  		$this->pagination->initialize($config);
  		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
  		$data['data'] = $this->event->get_all_events($per_page, $page);
