@@ -10,6 +10,7 @@ class Artikel extends CI_Controller {
    }
 
 	public function index(){
+		
 		$data = array();
 		$data['message'] = null;
 		$data['url']=null;
