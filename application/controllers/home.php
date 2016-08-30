@@ -28,7 +28,9 @@ class Home extends CI_Controller {
 			'username' => $this->input->post('username'),
 			'password' => md5($this->input->post('password'))
 		);
+
 		$result = $this->user->login($data);
+		$data['type'] = $result->type;
 		if($result){
 			$data['name'] = $result->name;
 			$data['status'] = 1;
@@ -46,8 +48,11 @@ class Home extends CI_Controller {
 	}
 
 	public function logout(){
-
 		$this->session->sess_destroy();
     	redirect('home');
 	}
 }
+
+
+
+
