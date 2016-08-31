@@ -116,4 +116,22 @@ class Md_event extends CI_Model {
 		$this->db->where('active', 1);
 		return $this->db->count_all('event');
 	}
+
+	public function search_event($keyword){
+		$this->db->select('id');
+		$this->db->select('title judul');
+		$this->db->select('description isi');
+		$this->db->select('pict img');
+		$this->db->select('date tanggal');
+		$this->db->from('event');
+		$this->db->like('title', $keyword);
+		$this->db->or_like('description', $keyword);
+		$this->db->where('active', 1);
+		$result = $this->db->get()->result();
+		foreach($result as $row){
+			$row->kategori = 'EVENT';
+		}
+
+		return $result;
+	}
 }

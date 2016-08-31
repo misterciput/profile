@@ -130,4 +130,16 @@ class Front_home extends CI_Controller {
  		$this->load->view('view_events_all', $data);
  	}
 
+ 	public function search(){
+ 		$keyword = $this->input->post('keyword');
+ 		$artikel = $this->artikel->search_artikel($keyword);
+ 		$event 	 = $this->event->search_event($keyword);
+ 		$result = array_merge($artikel, $event);
+ 		$data['keyword'] = $keyword;
+ 		$data['total'] = count($result);
+ 		$data['data'] = $result;
+ 		$data['social_media'] = $this->social_media->get_all_social_media();
+ 		$this->load->view('view_search_result', $data);
+ 	}
+
 }

@@ -34,7 +34,7 @@
 
     
 
-    <title>Event - Digital Signature | KOMINFO</title>
+    <title>Search Result - Digital Signature | KOMINFO</title>
 
     <!-- Favicon -->
 
@@ -164,16 +164,6 @@
 
         </div><!--/.nav-collapse -->
 
-        <!-- <div id="navbar" class="navbar-collapse collapse">
-
-          <ul id="top-menu" class="nav navbar-nav menu-scroll">
-
-            <li><a href="<?=base_url()?>">Home</a></li>                   
-
-          </ul>                            
-
-        </div> --><!--/.nav-collapse -->
-
        <div class="search-area">
           <form action="<?=base_url()?>front_home/search" method="post">
             <input id="keyword" name="keyword" type="text" placeholder="What're you looking for ?">
@@ -205,13 +195,11 @@
 
             <div class="blog-banner-area">
 
-              <h2>Event All</h2>
+              <h2>Search Result</h2>
 
-              <ol class="breadcrumb">
+              <ol class="breadcrumb">            
 
-                <li><a href="<?=base_url()?>Front_home">Home</a></li>                
-
-                <li class="active">Event All</li>
+                <li class="active"><font color="white">Showing <?=$total?> result of </font> <?=$keyword?></li>
 
               </ol>
 
@@ -255,19 +243,27 @@
 
                     <figure>
 
-                      <img alt="img" src="<?=base_url()?>assets/img/<?=$row->pict?>">
+                      <img alt="img" src="<?=base_url()?>assets/img/<?=$row->img?>">
 
                     </figure>
 
                     <div class="blog-title">
 
-                      <h2><a href="<?=base_url()?>Front_home/get_event_detail/<?=$row->id?>"><?=$row->title?></a></h2>
+                      <h2>
+                        <?php if($row->kategori != 'EVENT'){?>
+                        <a href="<?=base_url()?>Front_home/get_news_detail/<?=$row->id?>">
+                        <?php }else{ ?>
+                        <a href="<?=base_url()?>Front_home/get_event_detail/<?=$row->id?>">
+                        <?php }?>
+                          <?=$row->kategori?> : <?=$row->judul?>
+                        </a>
+                      </h2>
 
-                      <p>Posted by <a href="#" class="blog-admin">admin</a> on <span class="blog-date"><?=date('d F Y', strtotime($row->date))?></span></p>
+                      <p>Posted by <a href="#" class="blog-admin">admin</a> on <span class="blog-date"><?=date('d F Y', strtotime($row->tanggal))?></span></p>
 
                     </div>
 
-                    <?=substr($row->description, 0, 300)?> ... <a href="<?=base_url()?>Front_home/get_event_detail/<?=$row->id?>"><span>Read More</span></a>
+                    <?=substr($row->isi, 0, 300)?> ... <a href="<?=base_url()?>Front_home/get_news_detail/<?=$row->id?>"><span>Read More</span></a>
 
                     <div class="blog-footer">
 
@@ -280,7 +276,7 @@
 
                  
 
-                  <?=$paging?>
+                  <!-- <?=$paging?> -->
 
                   <!--Start Blog pagination -->
 
@@ -357,27 +353,26 @@
 
                   <!-- Start Sidebar Single widget -->
 
-                  <div class="single-widget">
+                <!--   <div class="single-widget">
 
-                    <h2>News</h2>
+                    <h2>Events</h2>
 
                     
 
                     <div class="instagram-feed">
 
-                      <?php foreach($nextnews as $key => $news){
+                      <?php foreach($nextevent as $key => $event){
                       ?>
-
 
                       <div class="single-instagram-feed">
 
-                        <a href="<?=base_url()?>Front_home/get_news_detail/<?=$news->id?>">
+                        <a href="<?=base_url()?>Front_home/get_event_detail/<?=$event->id?>">
 
-                          <img src="<?=base_url()?>assets/img/<?=$news->img?>" alt="img">
+                          <img src="<?=base_url()?>assets/img/<?=$event->pict?>" alt="img">
 
                           <div class="event-caption">
 
-                            <p><?=$news->judul?></p>
+                            <p><?=$event->title?></p>
 
                           </div>
 
@@ -386,14 +381,13 @@
                       </div>
 
                     
-                      <?php 
-                        }
-                      ?>
-
+                    <?php  
+                      }
+                    ?>
 
                     </div>
 
-                  </div>
+                  </div> -->
 
                   <!-- End Sidebar Single widget -->
 

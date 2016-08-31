@@ -165,15 +165,10 @@
         </div><!--/.nav-collapse -->
 
        <div class="search-area">
-
-          <form action="">
-
-            <input id="search" name="search" type="text" placeholder="What're you looking for ?">
-
+          <form action="<?=base_url()?>front_home/search" method="post">
+            <input id="keyword" name="keyword" type="text" placeholder="What're you looking for ?">
             <input id="search_submit" value="Rechercher" type="submit">
-
           </form>
-
         </div>         
 
       </div>          

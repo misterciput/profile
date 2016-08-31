@@ -92,4 +92,20 @@ class Md_artikel extends CI_Model {
 		$this->db->where('show', 1);
 		return $this->db->count_all('artikel');
 	}
+
+	public function search_artikel($keyword){
+		$this->db->select('id');
+		$this->db->select('judul');
+		$this->db->select('isi');
+		$this->db->select('img');
+		$this->db->select('kategori');
+		$this->db->select('tanggal');
+		$this->db->from('artikel');
+		$this->db->like('judul', $keyword);
+		$this->db->or_like('isi', $keyword);
+		$this->db->where('show', 1);
+		$result = $this->db->get()->result();
+
+		return $result;
+	}
 }
