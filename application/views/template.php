@@ -40,7 +40,7 @@
         </li>
 
         <!-- <?php echo $type; ?> -->
-
+        <?php $type=$this->session->userdata('type'); ?>
         <?php if($type==0){?>
 
         <li class="bold <?=$this->uri->segment(1) == 'user' ? 'active' : ''?>"><a href="<?=base_url()?>user" class="waves-effect waves-teal">User</a>
@@ -48,8 +48,8 @@
 
         <?php }?>
 
-        <li class="bold <?=$this->uri->segment(1) == 'social_media' ? 'active' : ''?>"><a href="<?=base_url()?>social_media" class="waves-effect waves-teal">Change Password</a>
-        </li>
+        <!-- <li class="bold <?=$this->uri->segment(1) == 'social_media' ? 'active' : ''?>"><a href="<?=base_url()?>social_media" class="waves-effect waves-teal">Change Password</a>
+        </li> -->
         <!-- <li class="bold <?=$this->uri->segment(1) == 'gallery' ? 'active' : ''?>"><a href="<?=base_url()?>gallery" class="waves-effect waves-teal">Gallery</a></li> -->
         <li class="bold"><a href="<?=base_url()?>home/logout" class="waves-effect waves-teal">Logout</a></li>
       </ul>

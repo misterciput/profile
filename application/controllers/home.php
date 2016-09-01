@@ -28,7 +28,6 @@ class Home extends CI_Controller {
 			'username' => $this->input->post('username'),
 			'password' => md5($this->input->post('password'))
 		);
-
 		$result = $this->user->login($data);
 		if($result){
 			$data['name'] = $result->name;

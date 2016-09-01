@@ -13,6 +13,7 @@ class User extends CI_Controller {
 		$data['message'] = null;
 		$data['url']=null;
 		if($this->session->userdata('status')){
+			$this->session->userdata('type');
 			$data['title'] = 'User';
 			$data['view'] = 'view_user';
 			$data['user'] = $this->user->get_all_user();
