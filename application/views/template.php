@@ -38,8 +38,16 @@
         </li>
          <li class="bold <?=$this->uri->segment(1) == 'social_media' ? 'active' : ''?>"><a href="<?=base_url()?>social_media" class="waves-effect waves-teal">Social Media</a>
         </li>
+
+        <!-- <?php echo $type; ?> -->
+
+        <?php if($type==0){?>
+
         <li class="bold <?=$this->uri->segment(1) == 'user' ? 'active' : ''?>"><a href="<?=base_url()?>user" class="waves-effect waves-teal">User</a>
         </li>
+
+        <?php }?>
+
         <li class="bold <?=$this->uri->segment(1) == 'social_media' ? 'active' : ''?>"><a href="<?=base_url()?>social_media" class="waves-effect waves-teal">Change Password</a>
         </li>
         <!-- <li class="bold <?=$this->uri->segment(1) == 'gallery' ? 'active' : ''?>"><a href="<?=base_url()?>gallery" class="waves-effect waves-teal">Gallery</a></li> -->

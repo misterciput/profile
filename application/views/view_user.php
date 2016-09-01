@@ -1,13 +1,11 @@
 		<table class="responsive-table bordered" id="table-user">
 			<thead>
 				<tr>
-					<th>No</th>
-					<th width="20%">username</th>
-					<th >Name</th>
-					<th>Email<th>
-					<th>Type</th>
-					<th hidden="">Type</th>
-					<!-- <th hidden="">Action</th> -->
+					<th width="1%">No</th>
+					<th width="10%">username</th>
+					<th width="30%">Name</th>
+					<!-- <th>Email</th> -->
+					<th>Type</th> 
 					<th>Action</th>
 					
 				</tr>
@@ -21,9 +19,9 @@
 					<td><?=$no?></td>
 					<td><?=$row->username?></td>
 					<td><?=$row->name?></td>
-					<td><?=$row->email?></td>
-					<td><?=$row->type == 1 ? 'Admin' : 'Super Admin'?><td>
-					<td width="20%" colspan="2">
+					<!-- <td><?=$row->email?></td> -->
+					<td><?=$row->type == 1 ? 'Admin' : 'Super Admin'?></td>
+					<td>
 						<a class="waves-effect waves-light btn orange" href="<?=base_url()?>user/edit/<?=$row->id?>" type="submit">Edit</a>
 						<a class="waves-effect waves-light btn red" href="<?=base_url()?>user/delete/<?=$row->id?>" type="submit">Delete</a>
 					</td>

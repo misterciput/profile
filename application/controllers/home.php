@@ -30,10 +30,10 @@ class Home extends CI_Controller {
 		);
 
 		$result = $this->user->login($data);
-		$data['type'] = $result->type;
 		if($result){
 			$data['name'] = $result->name;
 			$data['status'] = 1;
+			$data['type'] = $result->type;
 			$this->session->set_userdata($data);
 			$data['message'] = 'Selamat datang '.$data['name'];
 			$data['title'] = 'Artikel';
