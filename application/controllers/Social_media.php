@@ -9,6 +9,8 @@ class Social_media extends CI_Controller {
    }
 
    public function index($code = FALSE){
+    $data = array();
+    $data['message'] = null;
 		if($this->session->userdata('status')){
 			$data['title'] = 'Social Media';
 			$data['view'] = 'view_social_media';
@@ -26,6 +28,8 @@ class Social_media extends CI_Controller {
    }
 
    public function do_edit(){
+      $data = array();
+      $data['message'] = null;
    		if($this->session->userdata('status')){
 
    			$social_media = array(
@@ -35,7 +39,10 @@ class Social_media extends CI_Controller {
 
 			$data['title'] = 'Social Media';
 			$data['view'] = 'view_social_media';
-			$this->index();
+      $data['message'] = 'Link Sosmed telah diubah';
+      $data['social_media'] = $this->social_media->get_all_social_media();  
+			//$this->index();
+      $this->load->view('template', $data);
 		}else{
 			$this->load->view('view_login', $data);
 		}

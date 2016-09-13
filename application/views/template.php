@@ -34,8 +34,8 @@
         </li>
         <li class="bold <?=$this->uri->segment(1) == 'event' ? 'active' : ''?>"><a href="<?=base_url()?>event" class="waves-effect waves-teal">Event</a>
         </li>
-        <li class="bold <?=$this->uri->segment(1) == 'request' ? 'active' : ''?>"><a href="<?=base_url()?>request" class="waves-effect waves-teal">Request</a>
-        </li>
+        <!-- <li class="bold <?=$this->uri->segment(1) == 'request' ? 'active' : ''?>"><a href="<?=base_url()?>request" class="waves-effect waves-teal">Request</a>
+        </li> -->
          <li class="bold <?=$this->uri->segment(1) == 'social_media' ? 'active' : ''?>"><a href="<?=base_url()?>social_media" class="waves-effect waves-teal">Social Media</a>
         </li>
 

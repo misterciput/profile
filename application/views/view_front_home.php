@@ -90,7 +90,9 @@
 
     <div class="header-social">
     <?php foreach($social_media as $soc){?>
+        <?php if (!empty($soc->link)){?>
         <a class="<?=$soc->icon?>" href="<?=rawurldecode($soc->link)?>" target="_blank"><span class="fa fa-<?=$soc->icon?>" ></span></a>
+        <?php } ?>
     <?php } ?>
         <!-- <a class="dribbble" href="#"><span class="fa fa-dribbble"></span></a> -->
     </div> 
@@ -122,7 +124,7 @@
             <li><a href="#flow">Flow Request</a></li>
             <li><a href="#news">News </a></li>             
             <li><a href="#events">Event </a></li>      
-            <li><a href="#contact">Request eSignature</a></li>
+            <!-- <li><a href="#contact">Request eSignature</a></li> -->
           </ul>                            
         </div><!--/.nav-collapse -->
        <div class="search-area">
@@ -602,7 +604,7 @@
             </address>
           </div>
         </div> -->
-        <div class="col-md-12">
+        <!-- <div class="col-md-12">
           <div class="contact-right wow fadeInRight">
             <div class="title-area">
               <h2 class="tittle">Request eSignature</h2>
@@ -641,7 +643,8 @@
               <button type="submit" data-text="SUBMIT" class="button button-default"><span>SUBMIT</span></button>
             </form>
           </div>
-        </div>
+        </div> -->
+
       </div>
     </div>
   </section>
@@ -662,9 +665,12 @@
                 <a class="footer-logo" href="#"><img src="assets/images/logo.png" alt="Logo"></a>              
               <div class="footer-social">
                 <?php foreach($social_media as $soc){?>
-                  <a class="facebook" href="<?=rawurldecode($soc->link)?>" target="_blank"><span class="fa <?=$soc->icon?>" ></span></a>
+                  <?php if (!empty($soc->link)){?>
+                  <a class="<?=$soc->icon?>" href="<?=rawurldecode($soc->link)?>" target="_blank"><span class="fa fa-<?=$soc->icon?>" ></span></a>
+                  <?php } ?>
               <?php } ?>
               </div>
+              
             </div>
           </div>
         </div>
